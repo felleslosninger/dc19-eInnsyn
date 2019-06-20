@@ -12,4 +12,9 @@ public class webController {
         return "read";
     }
 
+    @GetMapping("/query")
+    public String query(){
+        return "query";
+    }
+
 }
