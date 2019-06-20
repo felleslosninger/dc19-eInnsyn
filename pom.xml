@@ -40,6 +40,12 @@
             <artifactId>azure-storage-spring-boot-starter</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
+            <version>7.2.2.jre11</version>
+        </dependency>
+
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
