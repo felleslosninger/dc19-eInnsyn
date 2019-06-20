@@ -34,13 +34,17 @@ public class EInnsynWebApplication {
             System.out.println("=========================================");
 
             // Create and execute a SELECT SQL statement.
-            String selectSql = "SELECT * " + "FROM [dbo].[Persons] ";
+            String tableName = "[dbo].[Persons]";
+            String selectStatement = "*";
+            String selectSql =
+                    "SELECT " + selectStatement +
+                    " FROM " + tableName;
 
             try (Statement statement = connection.createStatement();
                  ResultSet resultSet = statement.executeQuery(selectSql)) {
 
                 // Print results from select statement
-                System.out.println("Top 20 categories:");
+                System.out.println("Results from :");
                 while (resultSet.next())
                 {
                     System.out.println(resultSet.getString(1) + " "
