@@ -13,47 +13,38 @@ public class viewDatabase {
     String password = "@dificamp2019"; // update me
     String url = String.format("jdbc:sqlserver://%s:1433;database=%s;user=%s;password=%s;encrypt=true;"
             + "hostNameInCertificate=*.database.windows.net;loginTimeout=30;", hostName, dbName, user, password);
-    Connection connection = null;
-    Statement statement = null;
+    private Connection connection = null;
     public viewDatabase(){
         try {
             connection = DriverManager.getConnection(url);
             String schema = connection.getSchema();
             System.out.println("Successful connection - Schema: " + schema);
 
-            System.out.println("Insert data to table:");
+            System.out.println("Query data example:");
             System.out.println("=========================================");
 
-            statement = connection.createStatement();
-            String database = "INSERT INTO [dbo].[Persons]" +
-                    "VALUES ('Tiril', 24)";
-            statement.executeUpdate(database);
-            connection.close();
 
-        }
-            catch (Exception e) {
-                e.printStackTrace();}
-        // Create and execute a SELECT SQL statement.
-        //String selectSql = "SELECT * " + "FROM [dbo].[Persons] ";
+            // Create and execute a SELECT SQL statement.
+            String selectSql = "SELECT * " + "FROM [dbo].[Persons] ";
 
-        /*try (Statement statement = connection.createStatement();
-             ResultSet resultSet = statement.executeQuery(selectSql)) {
+            try (Statement statement = connection.createStatement();
+                 ResultSet resultSet = statement.executeQuery(selectSql)) {
 
-            // Print results from select statement
-            System.out.println("Top 20 categories:");
-            while (resultSet.next())
-            {
-                System.out.println(resultSet.getString(1) + " "
-                        + resultSet.getString(2));
+                // Print results from select statement
+                System.out.println("Top 20 categories:");
+                while (resultSet.next())
+                {
+                    System.out.println(resultSet.getString(1) + " "
+                            + resultSet.getString(2));
+                }
+                connection.close();
             }
-            connection.close();
         }
-    }
         catch (Exception e) {
-        e.printStackTrace();
-    }
+            e.printStackTrace();
+        }
 
-*/
+
 
 
 
@@ -64,5 +55,5 @@ public class viewDatabase {
             e.printStackTrace();
         }
 */
-}
+    }
 }

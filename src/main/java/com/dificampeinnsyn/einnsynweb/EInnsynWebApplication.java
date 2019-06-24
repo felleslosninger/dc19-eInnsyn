@@ -1,14 +1,8 @@
 package com.dificampeinnsyn.einnsynweb;
 
-import com.dificampeinnsyn.einnsynweb.controllers.registerInDatabase;
 import com.dificampeinnsyn.einnsynweb.controllers.viewDatabase;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.dificampeinnsyn.einnsynweb.controllers.registerDatabase;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.Scanner;
 
 
@@ -27,10 +21,10 @@ public class EInnsynWebApplication {
 
         if(typeWord.equals("reg")) {
             //showTables viewTables = new showTables();
-            viewDatabase viewDB = new viewDatabase();
+            registerDatabase regDB = new registerDatabase();
         }
-        if(typeWord.equals("view")) {
-            registerInDatabase regDB = new registerInDatabase();
+        else if(typeWord.equals("view")) {
+            viewDatabase viewDB = new viewDatabase();
         }
         else{
             System.out.println("Fail");
