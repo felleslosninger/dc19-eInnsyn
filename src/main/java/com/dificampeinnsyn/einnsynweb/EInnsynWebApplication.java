@@ -1,8 +1,9 @@
 package com.dificampeinnsyn.einnsynweb;
 
-import com.dificampeinnsyn.einnsynweb.controllers.viewDatabase;
-import com.dificampeinnsyn.einnsynweb.controllers.registerDatabase;
+import com.dificampeinnsyn.einnsynweb.readFile.readLines;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Scanner;
 
 
@@ -14,6 +15,7 @@ public class EInnsynWebApplication {
         String typeWord;
 
 
+/*
         System.out.println("To communicate with the db, you have to type in one of the following");
         System.out.println("Type 'view' to see the db");
         System.out.println("Type 'reg' to make the program register another line in db");
@@ -32,7 +34,7 @@ public class EInnsynWebApplication {
 
         //SpringApplication.run(EInnsynWebApplication.class, args);
         }
-
+*/
     /*public class showTables(){
         // Connect to database
         String hostName = "mysqlserver794613852.database.windows.net"; // update me
@@ -77,16 +79,17 @@ public class EInnsynWebApplication {
         }
 
 
+*/
 
-
-
-        /*  File f = new File("TEXT_FILES/minidata.txt");
+        File f = new File("C:\\Users\\camp-oih\\Desktop\\export_difi.ttl");
         try {
-            readLines.readLine(f);
+            readLines.readTurtle(f);
         } catch (IOException e){
             e.printStackTrace();
         }
-*/
-   // }
 
+
+        // }
+
+    }
 }

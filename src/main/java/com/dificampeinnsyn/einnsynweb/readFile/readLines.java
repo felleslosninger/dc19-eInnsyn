@@ -23,4 +23,30 @@ public class readLines {
         fr.close();
     }
 
+    @Autowired
+    public static void readTurtle(File f) throws IOException{
+        FileReader fr = new FileReader(f);
+        BufferedReader br = new BufferedReader(fr);
+
+        String line;
+
+        String pattern = ".* a arkiv:Journalpost ;";
+
+        while((line = br.readLine()) != null){
+
+            if (line.matches(pattern)){ //finds all journalposts
+                System.out.println(line);
+                for (int i = 0;i<13;i++){
+                    String attrLine = br.readLine();
+                    System.out.println(attrLine);
+                }
+                System.out.println("");
+                System.out.println("");
+            }
+
+        }
+        br.close();
+        fr.close();
+    }
+
 }
