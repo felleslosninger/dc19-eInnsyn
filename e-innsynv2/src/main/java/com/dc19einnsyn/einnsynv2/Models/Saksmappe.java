@@ -18,13 +18,13 @@ public class Saksmappe extends Mappe{
     private String saksaar;
     private String sakssekvensnummer;
     private String saksdato;
-    private String adminstrativEnhet;
+    private String administrativEnhet;
     private String saksansvarlig;
     private String journalenhet;
     private String saksstatus;
     private String utlaantDato;
     private String utlaantTil;
-    private String regeranseSekundaerKassifikasjon;
+    private String referanseSekundaerKassifikasjon;
     private String sakspart;
     private String presidens;
 
