@@ -6,7 +6,6 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.util.Set;
 
 @Entity
 @Data
@@ -16,7 +15,7 @@ public class Mappe {
     private String systemID;
 
     @Id
-    private int mappeID;
+    private long mappeID;
 
     private String tittel;
     private String offentligTittel;
@@ -34,9 +33,11 @@ public class Mappe {
     private String merknad;
     private String kassasjon;
     private String gradering;
-    private Skjerming skjerming;
-    private Mappe mappe;
-    private Set<Registrering> registrering;
-    private Set<Saksmappe> saksmapper;
-    private Set<Journalpost> jounalposter;
+
+
+    //private Skjerming skjerming;
+    // private Mappe mappe;
+    // private Set<Registrering> registrering;
+    //private Set<Saksmappe> saksmapper;
+    //private Set<Journalpost> jounalposter;
 }

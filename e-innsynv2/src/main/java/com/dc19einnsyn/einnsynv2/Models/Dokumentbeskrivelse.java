@@ -6,7 +6,6 @@ import lombok.NoArgsConstructor;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import java.util.Set;
 
 @Entity
 @Data
@@ -15,7 +14,7 @@ public class Dokumentbeskrivelse {
 
     @Id
     @GeneratedValue
-    private int dokumentBeskrivelseId;
+    private long dokumentBeskrivelseId;
 
     private String systemID;
     private String dokumenttype;
@@ -40,7 +39,7 @@ public class Dokumentbeskrivelse {
     private String gradering;
     private String elektroniskSignatur;
 
-    Set<Dokumentobjekt> dokumentobjekter;
+    //Set<Dokumentobjekt> dokumentobjekter;
 }
 
 /*

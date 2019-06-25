@@ -14,7 +14,7 @@ public class Skjerming {
 
     @Id
     @GeneratedValue
-    private int skjermingId;
+    private long skjermingId;
 
     private String tilgangsrestriksjon;
     private String skjermingshjemmel;

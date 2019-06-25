@@ -5,7 +5,6 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.util.Set;
 
 @Entity
 @Data
@@ -29,7 +28,7 @@ public class Registrering {
     private String korrespondansepart;
 
     @Id
-    private String registreringsID;
+    private long registreringsID; //trur dette skal være en long
 
     private String tittel;
     private String offentligTittel;
@@ -44,7 +43,7 @@ public class Registrering {
     private String kryssreferanse;
 
 
-    Set<Korrespondansepart> korrespondanseparter;
-    Set<Dokumentbeskrivelse> dokumentbeskrivelser;
-    Set<Skjerming> skjerminger;
+   // Set<Korrespondansepart> korrespondanseparter;
+    //Set<Dokumentbeskrivelse> dokumentbeskrivelser;
+    //Set<Skjerming> skjerminger;
 }

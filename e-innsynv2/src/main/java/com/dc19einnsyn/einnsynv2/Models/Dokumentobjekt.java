@@ -14,7 +14,7 @@ public class Dokumentobjekt {
 
     @Id
     @GeneratedValue
-    private int dokumentObjektId;
+    private long dokumentObjektId;
 
     private String versjonsnummer;
     private String variantformat;

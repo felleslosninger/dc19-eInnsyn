@@ -14,7 +14,7 @@ public class Korrespondansepart {
 
     @Id
     @GeneratedValue
-    private int korrespondansePartId;
+    private long korrespondansePartId;
 
     private String korrespondanseparttype;
     private String korrespondansepartNavn;
