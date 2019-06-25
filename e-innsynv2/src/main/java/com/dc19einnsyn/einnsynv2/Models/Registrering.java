@@ -1,6 +1,14 @@
 package com.dc19einnsyn.einnsynv2.Models;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.Entity;
 import java.util.Set;
+
+@Entity
+@Data
+@NoArgsConstructor
 
 public class Registrering {
     private String systemID;
@@ -32,7 +40,7 @@ public class Registrering {
     private String merknad;
     private String kryssreferanse;
 
-    
+
     Set<Korrespondansepart> korrespondanseparter;
     Set<Dokumentbeskrivelse> dokumentbeskrivelser;
     Set<Skjerming> skjerminger;
