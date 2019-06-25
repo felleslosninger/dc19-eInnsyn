@@ -1,18 +1,13 @@
 package com.dc19einnsyn.einnsynv2.Models;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Entity(name = "tbl_person")
-@Getter
-@Setter
-@ToString
+@Entity
+@Data
 @NoArgsConstructor
 public class Saksmappe extends Mappe{
     private String saksaar;

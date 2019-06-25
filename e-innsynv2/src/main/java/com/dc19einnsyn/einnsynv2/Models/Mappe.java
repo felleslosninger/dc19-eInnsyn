@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Set;
 
-@Entity(name = "tbl_person")
+@Entity
 @Data
 @NoArgsConstructor
 public class Mappe {
