@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Set;
 
 @Entity
@@ -27,7 +28,9 @@ public class Registrering {
 
     private String korrespondansepart;
 
+    @Id
     private String registreringsID;
+
     private String tittel;
     private String offentligTittel;
     private String beskrivelse;

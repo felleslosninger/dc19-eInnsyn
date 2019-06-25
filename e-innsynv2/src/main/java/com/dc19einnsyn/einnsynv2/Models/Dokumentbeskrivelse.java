@@ -4,11 +4,19 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import java.util.Set;
 
 @Entity
 @Data
 @NoArgsConstructor
 public class Dokumentbeskrivelse {
+
+    @Id
+    @GeneratedValue
+    private int dokumentBeskrivelseId;
+
     private String systemID;
     private String dokumenttype;
     private String dokumentstatus;
@@ -31,9 +39,8 @@ public class Dokumentbeskrivelse {
     private String skjerming;
     private String gradering;
     private String elektroniskSignatur;
-    private String dokumentobjekt;
 
-    private Dokumentobjekt[] dokumentobjekter;
+    Set<Dokumentobjekt> dokumentobjekter;
 }
 
 /*

@@ -4,11 +4,18 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity
 @Data
 @NoArgsConstructor
-public class Dokumentobjekt extends Dokumentbeskrivelse {
+public class Dokumentobjekt {
+
+    @Id
+    @GeneratedValue
+    private int dokumentObjektId;
+
     private String versjonsnummer;
     private String variantformat;
     private String format;
