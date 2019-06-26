@@ -1,12 +1,20 @@
 package com.dc19einnsyn.einnsynv2.Models;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 @Entity
 @Data
-
+@NoArgsConstructor
 public class Korrespondansepart {
+
+    @Id
+    @GeneratedValue
+    private long korrespondansePartId;
 
     private String korrespondanseparttype;
     private String korrespondansepartNavn;

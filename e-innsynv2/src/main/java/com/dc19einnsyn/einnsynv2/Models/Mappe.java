@@ -1,19 +1,22 @@
 package com.dc19einnsyn.einnsynv2.Models;
 
 
-import lombok.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.util.Set;
 
-@Entity(name = "tbl_person")
+@Entity
 @Data
 @NoArgsConstructor
 public class Mappe {
 
     private String systemID;
-    private String mappeID;
+
+    @Id
+    private long mappeID;
+
     private String tittel;
     private String offentligTittel;
     private String beskrivelse;
@@ -30,9 +33,11 @@ public class Mappe {
     private String merknad;
     private String kassasjon;
     private String gradering;
-    private Skjerming skjerming;
-    private Mappe mappe;
-    private Set<Registrering> registrering;
-    private Set<Saksmappe> saksmapper;
-    private Set<Journalpost> jounalposter;
+
+
+    //private Skjerming skjerming;
+    // private Mappe mappe;
+    // private Set<Registrering> registrering;
+    //private Set<Saksmappe> saksmapper;
+    //private Set<Journalpost> jounalposter;
 }
