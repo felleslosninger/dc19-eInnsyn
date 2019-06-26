@@ -4,10 +4,7 @@ import com.dc19einnsyn.einnsynv2.Models.Skjerming;
 import com.dc19einnsyn.einnsynv2.Repositories.DokumentobjektRepository;
 import com.dc19einnsyn.einnsynv2.Repositories.SkjermingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Set;
 
@@ -17,9 +14,9 @@ public class Controller {
     SkjermingRepository skjermingRepository;
     //DokumentobjektRepository dokumentobjektRepository;
 
-    @GetMapping(path = "/skjerming")
+    @GetMapping(path = "/skjerming/{skjermingDokument}")
     @ResponseBody
-    public Set<Skjerming> helloYou(@PathVariable("skjermingDokument") String skjermingDokument) {
+    public Set<Skjerming> dokumentfil(@PathVariable("skjermingDokument") String skjermingDokument) {
         return skjermingRepository.findBySkjermingDokument(skjermingDokument);
     }
 

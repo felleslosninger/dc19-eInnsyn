@@ -26,9 +26,9 @@ public class Skjerming {
         this.skjermingOpphoererData = skjermingOpphoererData;
     }
 
-        //@Id
-        //@GeneratedValue
-        //private long skjermingId;
+        @Id
+        @GeneratedValue
+        private long skjermingId;
 
         private String tilgangsrestriksjon;
         private String skjermingshjemmel;

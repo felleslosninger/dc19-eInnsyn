@@ -11,5 +11,5 @@ public interface SkjermingRepository extends CrudRepository<Skjerming, Long> {
     Set<Skjerming> findBySkjermingMetadata (String skjermingMetadata);
     Set<Skjerming> findBySkjermingDokument (String skjermingDokument);
     Set<Skjerming> findBySkjermingsvarighet (String skjermingsvarighet);
-    Set<Skjerming> findBySkjemringOpphoererData (String skjermingOpphoererData);
+    Set<Skjerming> findBySkjermingOpphoererData (String skjermingOpphoererData);
 }
