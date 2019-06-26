@@ -53,8 +53,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-<<<<<<< HEAD
         <!--        RDF4J       -->
         <dependency>
             <groupId>org.eclipse.rdf4j</groupId>
@@ -89,14 +87,7 @@
             <artifactId>rdf4j-core</artifactId>
             <type>pom</type>
         </dependency>
-=======
-        <!--<dependency>
-            <groupId>org.eclipse.rdf4j</groupId>
-            <artifactId>rdf4j-rio-rdfjson</artifactId>
-        </dependency>-->
 
-
->>>>>>> bba69ff3a085ac9a7645a3254be89ae9c7de3f66
     </dependencies>
 
     <!--<dependencyManagement>
