@@ -1,7 +1,6 @@
 package com.dc19einnsyn.einnsynv2.Controllers;
 
-import com.dc19einnsyn.einnsynv2.Models.Skjerming;
-import com.dc19einnsyn.einnsynv2.Repositories.DokumentobjektRepository;
+import com.dc19einnsyn.einnsynv2.packages.Skjerming;
 import com.dc19einnsyn.einnsynv2.Repositories.SkjermingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

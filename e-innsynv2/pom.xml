@@ -9,8 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.dc19e-innsyn</groupId>
+    <packaging>jar</packaging>
     <artifactId>e-innsynv2</artifactId>
     <version>0.0.1</version>
+
     <name>e-innsynv2</name>
     <description>Versjon 2 av EInnsyn 25.06</description>
 
@@ -31,7 +33,9 @@
         <dependency>
             <groupId>com.microsoft.azure</groupId>
             <artifactId>azure-spring-boot-starter</artifactId>
+            <version>2.0.1</version>
         </dependency>
+
 
         <dependency>
             <groupId>com.h2database</groupId>
@@ -53,50 +57,65 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+
         <!--        RDF4J       -->
-        <dependency>
-            <groupId>org.eclipse.rdf4j</groupId>
-            <artifactId>rdf4j-rio-rdfjson</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.rdf4j</groupId>
-            <artifactId>rdf4j-sail-memory</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.rdf4j</groupId>
-            <artifactId>rdf4j-repository-sail</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.rdf4j</groupId>
-            <artifactId>rdf4j-rio-jsonld</artifactId>
-        </dependency>
+
+              <dependency>
+                  <groupId>org.eclipse.rdf4j</groupId>
+                  <artifactId>rdf4j-rio-rdfjson</artifactId>
+                  <version>2.5.2</version>
+              </dependency>
+              <dependency>
+                  <groupId>org.eclipse.rdf4j</groupId>
+                  <artifactId>rdf4j-sail-memory</artifactId>
+                  <version>2.5.2</version>
+              </dependency>
+              <dependency>
+                  <groupId>org.eclipse.rdf4j</groupId>
+                  <artifactId>rdf4j-repository-sail</artifactId>
+                  <version>2.5.2</version>
+              </dependency>
+              <dependency>
+                  <groupId>org.eclipse.rdf4j</groupId>
+                  <artifactId>rdf4j-rio-jsonld</artifactId>
+                  <version>2.5.2</version>
+              </dependency>
         <dependency>
             <groupId>org.eclipse.rdf4j</groupId>
             <artifactId>rdf4j-queryparser-sparql</artifactId>
+            <version>2.5.2</version>
         </dependency>
+
         <dependency>
             <groupId>org.eclipse.rdf4j</groupId>
             <artifactId>rdf4j-rio-turtle</artifactId>
+            <version>2.5.2</version>
         </dependency>
+
         <dependency>
             <groupId>org.eclipse.rdf4j</groupId>
             <artifactId>rdf4j-rio-rdfxml</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.rdf4j</groupId>
-            <artifactId>rdf4j-core</artifactId>
-            <type>pom</type>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.rdf4j</groupId>
-            <artifactId>rdf4j-rio-api</artifactId>
             <version>2.5.2</version>
         </dependency>
-        <dependency>
-            <groupId>org.eclipse.rdf4j</groupId>
-            <artifactId>rdf4j-query</artifactId>
-            <version>2.5.2</version>
-        </dependency>
+
+        <!--
+              <dependency>
+                  <groupId>org.eclipse.rdf4j</groupId>
+                  <artifactId>rdf4j-core</artifactId>
+                  <type>pom</type>
+              </dependency>
+        -->
+              <dependency>
+                  <groupId>org.eclipse.rdf4j</groupId>
+                  <artifactId>rdf4j-rio-api</artifactId>
+                  <version>2.5.2</version>
+              </dependency>
+              <dependency>
+                  <groupId>org.eclipse.rdf4j</groupId>
+                  <artifactId>rdf4j-query</artifactId>
+                  <version>2.5.2</version>
+              </dependency>
 
     </dependencies>
 
@@ -128,6 +147,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
+    <finalName>eInnsyn</finalName>
     </build>
 
 </project>

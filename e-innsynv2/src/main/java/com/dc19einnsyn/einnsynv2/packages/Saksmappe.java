@@ -1,10 +1,8 @@
-package com.dc19einnsyn.einnsynv2.Models;
+package com.dc19einnsyn.einnsynv2.packages;
 
 import lombok.*;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 
 @Entity
 @Data
