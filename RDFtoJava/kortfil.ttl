@@ -1,0 +1,72 @@
+@prefix : <http://api.stardog.com/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix stardog: <tag:stardog:api:> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix arkiv: <http://www.arkivverket.no/standarder/noark5/arkivstruktur/> .
+@prefix bruker: <http://data.einnsyn.no/brukermeta/> .
+@prefix virksomhet: <http://data.einnsyn.no/virksomhetmeta/> .
+
+<http://data.einnsyn.no/noark4/Journalpost--991825827--2013--1289--1--2013> a arkiv:Journalpost ;
+	arkiv:registreringsID 8327860 ;
+	arkiv:offentligTittel "Høring - Opinion nr. 06/2012 om endringer av forordning (EF) nr. 2042/2003 - Vedlikeholdsforordningen" ;
+	arkiv:offentligTittel_SENSITIV "Høring - Opinion nr. 06/2012 om endringer av forordning (EF) nr. 2042/2003 - Vedlikeholdsforordningen" ;
+	arkiv:offentligTittel_LIST _:genid39962fde052d085e2d40d32d85882da2fc3ffd5848COUNTER228658 ;
+	arkiv:journalposttype arkiv:inngåendeDokument ;
+	arkiv:journalpostnummer 1 ;
+	arkiv:journalaar 2013 ;
+	arkiv:publisertDato "2013-10-22"^^xsd:date ;
+	arkiv:journaldato "2013-10-15"^^xsd:date ;
+	arkiv:journalsekvensnummer 5963 ;
+	arkiv:dokumentetsDato "2013-10-15"^^xsd:date ;
+	arkiv:parent <http://data.einnsyn.no/noark4/Saksmappe--991825827--1289--2013> ;
+	arkiv:korrespondansepart <http://data.einnsyn.no/noark4/29d26971-b64b-4a5d-8716-153124fd6fff> .
+
+
+<http://data.einnsyn.no/noark4/Journalpost--991825827--2014--36--1--2014> a arkiv:Journalpost ;
+	arkiv:registreringsID 9151199 ;
+	arkiv:offentligTittel "Forslag til avtaletekst om arkivtjenester" ;
+	arkiv:offentligTittel_SENSITIV "Forslag til avtaletekst om arkivtjenester" ;
+	arkiv:offentligTittel_LIST _:genid39962fde052d085e2d40d32d85882da2fc3ffd5848COUNTER245946 ;
+	arkiv:journalposttype arkiv:inngåendeDokument ;
+	arkiv:journalpostnummer 1 ;
+	arkiv:journalaar 2014 ;
+	arkiv:publisertDato "2014-01-20"^^xsd:date ;
+	arkiv:journaldato "2014-01-10"^^xsd:date ;
+	arkiv:journalsekvensnummer 504 ;
+	arkiv:dokumentetsDato "2014-01-07"^^xsd:date ;
+	arkiv:parent <http://data.einnsyn.no/noark4/Saksmappe--991825827--36--2014> ;
+	arkiv:korrespondansepart <http://data.einnsyn.no/noark4/12c040ae-789a-4e91-8aad-e1c00c041aa4> .
+
+
+<http://data.einnsyn.no/noark4/Journalpost--991825827--2014--36--2--2014> a arkiv:Journalpost ;
+	arkiv:registreringsID 9233321 ;
+	arkiv:offentligTittel "Forslag til avtaletekst om arkivtjenester - Avtale om leveranse av databasetjenester" ;
+	arkiv:offentligTittel_SENSITIV "Forslag til avtaletekst om arkivtjenester - Avtale om leveranse av databasetjenester" ;
+	arkiv:offentligTittel_LIST _:genid39962fde052d085e2d40d32d85882da2fc3ffd5848COUNTER246795 ;
+	arkiv:journalposttype arkiv:utgåendeDokument ;
+	arkiv:journalpostnummer 2 ;
+	arkiv:journalaar 2014 ;
+	arkiv:publisertDato "2014-01-27"^^xsd:date ;
+	arkiv:journaldato "2014-01-14"^^xsd:date ;
+	arkiv:journalsekvensnummer 612 ;
+	arkiv:dokumentetsDato "2014-01-13"^^xsd:date ;
+	arkiv:parent <http://data.einnsyn.no/noark4/Saksmappe--991825827--36--2014> ;
+	arkiv:korrespondansepart <http://data.einnsyn.no/noark4/7258ef41-64d0-477d-8f1e-01095807b3aa> .
+
+
+<http://data.einnsyn.no/noark4/Journalpost--991825827--2014--36--3--2014> a arkiv:Journalpost ;
+	arkiv:registreringsID 9303462 ;
+	arkiv:offentligTittel "Signert avtale - Levering av arkivtjenester og tjenester knyttet til elektronisk sak- og arkivsystem mellom Fylkesmannen i Sogn og Fjordane og Difi" ;
+	arkiv:offentligTittel_SENSITIV "Signert avtale - Levering av arkivtjenester og tjenester knyttet til elektronisk sak- og arkivsystem mellom Fylkesmannen i Sogn og Fjordane og Difi" ;
+	arkiv:offentligTittel_LIST _:genid39962fde052d085e2d40d32d85882da2fc3ffd5848COUNTER247331 ;
+	arkiv:journalposttype arkiv:inngåendeDokument ;
+	arkiv:journalpostnummer 3 ;
+	arkiv:journalaar 2014 ;
+	arkiv:publisertDato "2014-01-31"^^xsd:date ;
+	arkiv:journaldato "2014-01-21"^^xsd:date ;
+	arkiv:journalsekvensnummer 977 ;
+	arkiv:dokumentetsDato "2014-01-17"^^xsd:date ;
+	arkiv:parent <http://data.einnsyn.no/noark4/Saksmappe--991825827--36--2014> ;
+	arkiv:korrespondansepart <http://data.einnsyn.no/noark4/8c3ffc62-5129-418a-9a13-b7447fdc97f3> .
