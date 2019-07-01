@@ -1,4 +1,4 @@
-package com.dc19einnsyn.einnsynv2.Models;
+package com.dc19einnsyn.einnsynv2.packages;
 
 
 import lombok.Data;

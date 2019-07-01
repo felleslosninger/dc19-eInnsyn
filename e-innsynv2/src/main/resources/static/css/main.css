@@ -1,0 +1,22 @@
+body{
+    /*background-image: linear-gradient(to top left,#581845,#900C3f,#C70039,#FF5733,#FFC300);*/
+    background-image: linear-gradient(to top left,rgba(5, 102, 141, 1),rgba(2, 128, 144, 1),rgba(0, 168, 150, 1),rgba(2, 195, 154, 1),rgba(240, 243, 189, 1));
+    background-repeat: no-repeat;
+    height:100vh;
+    padding:2rem;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    color:#232323;
+}
+
+section {
+    float: left;
+    width:40%;
+    margin: 0 auto;
+}
+
+.tall {
+    height:400px;
+}
