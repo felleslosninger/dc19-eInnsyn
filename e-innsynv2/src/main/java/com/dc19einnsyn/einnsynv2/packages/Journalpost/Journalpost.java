@@ -1,33 +1,35 @@
 package com.dc19einnsyn.einnsynv2.packages.Journalpost;
 
 import com.dc19einnsyn.einnsynv2.packages.Registrering.Registrering;
-import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import java.util.Date;
 
 @Entity
-@Data //lager getters,setters,toString og noen til.
 @NoArgsConstructor
 public class Journalpost extends Registrering {
 
-    //Forenklet
-    //NOTHING?
 
-    //Full
-    private String journalaar;
-    private String journalsekvensnummer;
-    private String journalpostnummer;
+    @Id
+    @GeneratedValue
+    private Long JournalpostId;
+
+    private Integer journalaar;
+    private Long journalsekvensnummer;
+    private Integer journalpostnummer;
     private String journalposttype;
     private String journalstatus;
-    private String journaldato;
-    private String dokumentetsDato;
-    private String mottattDato;
-    private String sendtDato;
-    private String forfallsdato;
-    private String offentlighetsvurdertDato;
-    private String antallVedlegg;
-    private String utlaantDato;
+    private Date journaldato;
+    private Date dokumentetsDato;
+    private Date mottattDato;
+    private Date sendtDato;
+    private Date forfallsdato;
+    private Date offentlighetsvurdertDato;
+    private Integer antallVedlegg;
+    private Date utlaantDato;
     private String utlaantTil;
     private String journalenhet;
     private String avskrivning;
@@ -36,6 +38,197 @@ public class Journalpost extends Registrering {
     private String elektroniskSignatur;
     private String foelgsakenreferanse;
 
+    public Journalpost(Integer journalaar, Long journalsekvensnummer, Integer journalpostnummer, String journalposttype, String journalstatus, Date journaldato, Date dokumentetsDato, Date mottattDato, Date sendtDato, Date forfallsdato, Date offentlighetsvurdertDato, Integer antallVedlegg, Date utlaantDato, String utlaantTil, String journalenhet, String avskrivning, String dokumentflyt, String presedens, String elektroniskSignatur, String foelgsakenreferanse) {
+        this.journalaar = journalaar;
+        this.journalsekvensnummer = journalsekvensnummer;
+        this.journalpostnummer = journalpostnummer;
+        this.journalposttype = journalposttype;
+        this.journalstatus = journalstatus;
+        this.journaldato = journaldato;
+        this.dokumentetsDato = dokumentetsDato;
+        this.mottattDato = mottattDato;
+        this.sendtDato = sendtDato;
+        this.forfallsdato = forfallsdato;
+        this.offentlighetsvurdertDato = offentlighetsvurdertDato;
+        this.antallVedlegg = antallVedlegg;
+        this.utlaantDato = utlaantDato;
+        this.utlaantTil = utlaantTil;
+        this.journalenhet = journalenhet;
+        this.avskrivning = avskrivning;
+        this.dokumentflyt = dokumentflyt;
+        this.presedens = presedens;
+        this.elektroniskSignatur = elektroniskSignatur;
+        this.foelgsakenreferanse = foelgsakenreferanse;
+    }
+
+
+    public Long getJournalpostId() {
+        return JournalpostId;
+    }
+
+    public void setJournalpostId(Long journalpostId) {
+        JournalpostId = journalpostId;
+    }
+
+    public Integer getJournalaar() {
+        return journalaar;
+    }
+
+    public void setJournalaar(Integer journalaar) {
+        this.journalaar = journalaar;
+    }
+
+    public Long getJournalsekvensnummer() {
+        return journalsekvensnummer;
+    }
+
+    public void setJournalsekvensnummer(Long journalsekvensnummer) {
+        this.journalsekvensnummer = journalsekvensnummer;
+    }
+
+    public Integer getJournalpostnummer() {
+        return journalpostnummer;
+    }
+
+    public void setJournalpostnummer(Integer journalpostnummer) {
+        this.journalpostnummer = journalpostnummer;
+    }
+
+    public String getJournalposttype() {
+        return journalposttype;
+    }
+
+    public void setJournalposttype(String journalposttype) {
+        this.journalposttype = journalposttype;
+    }
+
+    public String getJournalstatus() {
+        return journalstatus;
+    }
+
+    public void setJournalstatus(String journalstatus) {
+        this.journalstatus = journalstatus;
+    }
+
+    public Date getJournaldato() {
+        return journaldato;
+    }
+
+    public void setJournaldato(Date journaldato) {
+        this.journaldato = journaldato;
+    }
+
+    public Date getDokumentetsDato() {
+        return dokumentetsDato;
+    }
+
+    public void setDokumentetsDato(Date dokumentetsDato) {
+        this.dokumentetsDato = dokumentetsDato;
+    }
+
+    public Date getMottattDato() {
+        return mottattDato;
+    }
+
+    public void setMottattDato(Date mottattDato) {
+        this.mottattDato = mottattDato;
+    }
+
+    public Date getSendtDato() {
+        return sendtDato;
+    }
+
+    public void setSendtDato(Date sendtDato) {
+        this.sendtDato = sendtDato;
+    }
+
+    public Date getForfallsdato() {
+        return forfallsdato;
+    }
+
+    public void setForfallsdato(Date forfallsdato) {
+        this.forfallsdato = forfallsdato;
+    }
+
+    public Date getOffentlighetsvurdertDato() {
+        return offentlighetsvurdertDato;
+    }
+
+    public void setOffentlighetsvurdertDato(Date offentlighetsvurdertDato) {
+        this.offentlighetsvurdertDato = offentlighetsvurdertDato;
+    }
+
+    public Integer getAntallVedlegg() {
+        return antallVedlegg;
+    }
+
+    public void setAntallVedlegg(Integer antallVedlegg) {
+        this.antallVedlegg = antallVedlegg;
+    }
+
+    public Date getUtlaantDato() {
+        return utlaantDato;
+    }
+
+    public void setUtlaantDato(Date utlaantDato) {
+        this.utlaantDato = utlaantDato;
+    }
+
+    public String getUtlaantTil() {
+        return utlaantTil;
+    }
+
+    public void setUtlaantTil(String utlaantTil) {
+        this.utlaantTil = utlaantTil;
+    }
+
+    public String getJournalenhet() {
+        return journalenhet;
+    }
+
+    public void setJournalenhet(String journalenhet) {
+        this.journalenhet = journalenhet;
+    }
+
+    public String getAvskrivning() {
+        return avskrivning;
+    }
+
+    public void setAvskrivning(String avskrivning) {
+        this.avskrivning = avskrivning;
+    }
+
+    public String getDokumentflyt() {
+        return dokumentflyt;
+    }
+
+    public void setDokumentflyt(String dokumentflyt) {
+        this.dokumentflyt = dokumentflyt;
+    }
+
+    public String getPresedens() {
+        return presedens;
+    }
+
+    public void setPresedens(String presedens) {
+        this.presedens = presedens;
+    }
+
+    public String getElektroniskSignatur() {
+        return elektroniskSignatur;
+    }
+
+    public void setElektroniskSignatur(String elektroniskSignatur) {
+        this.elektroniskSignatur = elektroniskSignatur;
+    }
+
+    public String getFoelgsakenreferanse() {
+        return foelgsakenreferanse;
+    }
+
+    public void setFoelgsakenreferanse(String foelgsakenreferanse) {
+        this.foelgsakenreferanse = foelgsakenreferanse;
+    }
 }
 
 

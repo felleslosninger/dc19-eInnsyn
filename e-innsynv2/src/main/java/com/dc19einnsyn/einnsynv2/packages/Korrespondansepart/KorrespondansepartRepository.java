@@ -1,4 +1,6 @@
 package com.dc19einnsyn.einnsynv2.packages.Korrespondansepart;
 
-public interface KorrespondansepartRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface KorrespondansepartRepository extends JpaRepository<Korrespondansepart, Long> {
 }
