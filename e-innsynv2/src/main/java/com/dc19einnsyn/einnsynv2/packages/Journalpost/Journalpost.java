@@ -4,8 +4,6 @@ import com.dc19einnsyn.einnsynv2.packages.Registrering.Registrering;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import java.util.Date;
 
 @Entity
@@ -13,9 +11,6 @@ import java.util.Date;
 public class Journalpost extends Registrering {
 
 
-    @Id
-    @GeneratedValue
-    private Long JournalpostId;
 
     private Integer journalaar;
     private Long journalsekvensnummer;
@@ -38,7 +33,8 @@ public class Journalpost extends Registrering {
     private String elektroniskSignatur;
     private String foelgsakenreferanse;
 
-    public Journalpost(Integer journalaar, Long journalsekvensnummer, Integer journalpostnummer, String journalposttype, String journalstatus, Date journaldato, Date dokumentetsDato, Date mottattDato, Date sendtDato, Date forfallsdato, Date offentlighetsvurdertDato, Integer antallVedlegg, Date utlaantDato, String utlaantTil, String journalenhet, String avskrivning, String dokumentflyt, String presedens, String elektroniskSignatur, String foelgsakenreferanse) {
+    public Journalpost(Long registreringsID, String systemID, String opprettetDato, String opprettetAv, String arkivertDato, String arkivertAv, String referanseArkivdel, String kassasjon, String skjerming, String gradering, String dokumentbeskrivelse, String dokumentobjekt, String korrespondansepart, String tittel, String offentligTittel, String beskrivelse, String noekkelord, String forfatter, String dokumentmedium, String oppbevaringssted, String virksomhetsspesifikkeMetadata, String merknad, String kryssreferanse, Integer journalaar, Long journalsekvensnummer, Integer journalpostnummer, String journalposttype, String journalstatus, Date journaldato, Date dokumentetsDato, Date mottattDato, Date sendtDato, Date forfallsdato, Date offentlighetsvurdertDato, Integer antallVedlegg, Date utlaantDato, String utlaantTil, String journalenhet, String avskrivning, String dokumentflyt, String presedens, String elektroniskSignatur, String foelgsakenreferanse) {
+        super(registreringsID, systemID, opprettetDato, opprettetAv, arkivertDato, arkivertAv, referanseArkivdel, kassasjon, skjerming, gradering, dokumentbeskrivelse, dokumentobjekt, korrespondansepart, tittel, offentligTittel, beskrivelse, noekkelord, forfatter, dokumentmedium, oppbevaringssted, virksomhetsspesifikkeMetadata, merknad, kryssreferanse);
         this.journalaar = journalaar;
         this.journalsekvensnummer = journalsekvensnummer;
         this.journalpostnummer = journalpostnummer;
@@ -59,15 +55,6 @@ public class Journalpost extends Registrering {
         this.presedens = presedens;
         this.elektroniskSignatur = elektroniskSignatur;
         this.foelgsakenreferanse = foelgsakenreferanse;
-    }
-
-
-    public Long getJournalpostId() {
-        return JournalpostId;
-    }
-
-    public void setJournalpostId(Long journalpostId) {
-        JournalpostId = journalpostId;
     }
 
     public Integer getJournalaar() {

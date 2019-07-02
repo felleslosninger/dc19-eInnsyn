@@ -12,29 +12,29 @@ public class JournalpostController {
     @Autowired
     private JournalpostService journalpostService;
 
-    @GetMapping("/Journalposter")
+    @GetMapping("/journalposter")
     public List<Journalpost> getAllJournalposter(){
         return journalpostService.getAllJournalposter();
     }
 
-    @GetMapping("/Journalposter/{id}")
+    @GetMapping("/journalposter/{id}")
     public Optional<Journalpost> getJournalpost(@PathVariable Long id){
         return journalpostService.getJournalpost(id);
     }
 
-    @PostMapping("/Journalposter")
+    @PostMapping("/journalposter")
     public Journalpost addJournalpost(@RequestBody Journalpost dokumentbeskrivelse){
         return journalpostService.addJournalpost(dokumentbeskrivelse);
     }
 
-    @PutMapping("/Journalposter/{id}")
+    @PutMapping("/journalposter/{id}")
     public Journalpost updateJournalpost(@RequestBody Journalpost dokumentbeskrivelse, @PathVariable Long id){
         journalpostService.updateJournalpost(dokumentbeskrivelse, id);
         return dokumentbeskrivelse;
     }
 
 
-    @DeleteMapping("/dokumentbeskrivelser/{id}")
+    @DeleteMapping("/journalposter/{id}")
     public void deleteJournalpost(@PathVariable Long id){
         journalpostService.deleteJournalpost(id);
     }

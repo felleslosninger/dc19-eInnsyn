@@ -12,29 +12,29 @@ public class KorrespondansepartController {
     @Autowired
     private KorrespondansepartService korrespondansepartService;
 
-    @GetMapping("/Korrespondanseparter")
+    @GetMapping("/korrespondanseparter")
     public List<Korrespondansepart> getAllKorrespondanseparter(){
         return korrespondansepartService.getAllKorrespondanseparter();
     }
 
-    @GetMapping("/Korrespondanseparter/{id}")
+    @GetMapping("/korrespondanseparter/{id}")
     public Optional<Korrespondansepart> getKorrespondansepart(@PathVariable Long id){
         return korrespondansepartService.getKorrespondansepart(id);
     }
 
-    @PostMapping("/Korrespondanseparter")
+    @PostMapping("/korrespondanseparter")
     public Korrespondansepart addKorrespondansepart(@RequestBody Korrespondansepart korrespondansepart){
         return korrespondansepartService.addKorrespondansepart(korrespondansepart);
     }
 
-    @PutMapping("/Korrespondanseparter/{id}")
+    @PutMapping("/korrespondanseparter/{id}")
     public Korrespondansepart updateKorrespondansepart(@RequestBody Korrespondansepart korrespondansepart, @PathVariable Long id){
         korrespondansepartService.updateKorrespondansepart(korrespondansepart, id);
         return korrespondansepart;
     }
 
 
-    @DeleteMapping("/Korrespondanseparter/{id}")
+    @DeleteMapping("/korrespondanseparter/{id}")
     public void deleteJournalpost(@PathVariable Long id){
         korrespondansepartService.deleteKorrespondansepart(id);
     }

@@ -34,7 +34,7 @@ public class JournalpostService {
 
 
     public Journalpost updateJournalpost(Journalpost journalpost, Long id){
-        journalpost.setJournalpostId(id);
+        journalpost.setRegistreringsID(id);
         journalpostRepository.save(journalpost);
         return journalpost;
     }

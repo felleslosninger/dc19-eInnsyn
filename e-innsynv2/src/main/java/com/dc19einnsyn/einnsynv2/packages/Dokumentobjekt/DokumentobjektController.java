@@ -1,6 +1,5 @@
 package com.dc19einnsyn.einnsynv2.packages.Dokumentobjekt;
 
-import com.dc19einnsyn.einnsynv2.packages.Dokumentbeskrivelse.Dokumentbeskrivelse;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,29 +10,29 @@ public class DokumentobjektController {
 
     private DokumentobjektService dokumentobjektService;
 
-    @GetMapping("/dokumentobjekt")
+    @GetMapping("/dokumentobjekter")
     public List<Dokumentobjekt> getAllDokumentobjekter(){
         return dokumentobjektService.getAllDokumentobjekter();
     }
 
-    @GetMapping("/dokumentobjekt/{id}")
+    @GetMapping("/dokumentobjekter/{id}")
     public Optional<Dokumentobjekt> getDokumentobjekt(@PathVariable Long id){
         return dokumentobjektService.getDokumentobjekt(id);
     }
 
-    @PostMapping("/dokumentobjekt")
+    @PostMapping("/dokumentobjekter")
     public Dokumentobjekt addDokumentobjekt(@RequestBody Dokumentobjekt dokumentobjekt){
         return dokumentobjektService.addDokumentobjekt(dokumentobjekt);
     }
 
-    @PutMapping("/dokumentobjekt/{id}")
+    @PutMapping("/dokumentobjekter/{id}")
     public Dokumentobjekt updateDokumentobjekt(@RequestBody Dokumentobjekt dokumentobjekt, @PathVariable Long id){
         dokumentobjektService.updateDokumentobjekt(dokumentobjekt, id);
         return dokumentobjekt;
     }
 
 
-    @DeleteMapping("/dokumentobjekt/{id}")
+    @DeleteMapping("/dokumentobjekter/{id}")
     public void deleteDokumentobjekt(@PathVariable Long id){
         dokumentobjektService.deleteDokumentobjekt(id);
     }
