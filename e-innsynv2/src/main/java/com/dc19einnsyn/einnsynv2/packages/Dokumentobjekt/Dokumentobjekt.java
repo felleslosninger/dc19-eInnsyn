@@ -1,4 +1,4 @@
-package com.dc19einnsyn.einnsynv2.packages;
+package com.dc19einnsyn.einnsynv2.packages.Dokumentobjekt;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

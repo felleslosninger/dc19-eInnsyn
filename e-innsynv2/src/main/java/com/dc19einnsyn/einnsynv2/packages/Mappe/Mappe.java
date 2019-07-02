@@ -1,4 +1,4 @@
-package com.dc19einnsyn.einnsynv2.packages;
+package com.dc19einnsyn.einnsynv2.packages.Mappe;
 
 
 import lombok.Data;

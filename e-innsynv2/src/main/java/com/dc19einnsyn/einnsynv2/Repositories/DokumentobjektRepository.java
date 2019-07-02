@@ -1,6 +1,6 @@
 package com.dc19einnsyn.einnsynv2.Repositories;
 
-import com.dc19einnsyn.einnsynv2.packages.Dokumentobjekt;
+import com.dc19einnsyn.einnsynv2.packages.Dokumentobjekt.Dokumentobjekt;
 import org.springframework.data.repository.CrudRepository;
 
 public interface DokumentobjektRepository extends CrudRepository<Dokumentobjekt, Long> {

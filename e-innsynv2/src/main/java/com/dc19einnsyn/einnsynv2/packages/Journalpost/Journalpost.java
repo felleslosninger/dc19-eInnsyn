@@ -1,5 +1,6 @@
-package com.dc19einnsyn.einnsynv2.packages;
+package com.dc19einnsyn.einnsynv2.packages.Journalpost;
 
+import com.dc19einnsyn.einnsynv2.packages.Registrering.Registrering;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -8,7 +9,7 @@ import javax.persistence.Entity;
 @Entity
 @Data //lager getters,setters,toString og noen til.
 @NoArgsConstructor
-public class Journalpost extends Registrering{
+public class Journalpost extends Registrering {
 
     //Forenklet
     //NOTHING?

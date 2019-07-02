@@ -1,5 +1,6 @@
-package com.dc19einnsyn.einnsynv2.packages;
+package com.dc19einnsyn.einnsynv2.packages.Saksmappe;
 
+import com.dc19einnsyn.einnsynv2.packages.Mappe.Mappe;
 import lombok.*;
 
 import javax.persistence.Entity;
@@ -7,7 +8,7 @@ import javax.persistence.Entity;
 @Entity
 @Data
 @NoArgsConstructor
-public class Saksmappe extends Mappe{
+public class Saksmappe extends Mappe {
     private String saksaar;
     private String sakssekvensnummer;
     private String saksdato;

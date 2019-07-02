@@ -1,6 +1,6 @@
 package com.dc19einnsyn.einnsynv2.Repositories;
 
-import com.dc19einnsyn.einnsynv2.packages.Skjerming;
+import com.dc19einnsyn.einnsynv2.packages.Skjerming.Skjerming;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.Set;
