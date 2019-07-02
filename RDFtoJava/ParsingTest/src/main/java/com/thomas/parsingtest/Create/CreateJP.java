@@ -1,6 +1,7 @@
 package com.thomas.parsingtest.Create;
 
-import com.thomas.rdftoclass.Models.Journalpost;
+import com.thomas.parsingtest.Models.Journalpost;
+//import com.thomas.rdftoclass.Models.Journalpost;
 import org.eclipse.rdf4j.model.Model;
 
 public class CreateJP {

@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.io.IOException;
 
 
+import static com.thomas.parsingtest.Convert.HowToConvertRdfToJson.convertRdfToPrettyJson;
 import static com.thomas.parsingtest.Iterator.Iteratorv1.iteratorv1;
 import static com.thomas.parsingtest.Iterator.Iteratorv2.iteratorv2;
 import static com.thomas.parsingtest.Iterator.Iteratorv3.iteratorv3;
@@ -19,6 +20,7 @@ public class ParsingtestApplication {
         //iteratorv1();
         //iteratorv2();
         //iteratorv3();
+        convertRdfToPrettyJson();
 
 
     }
