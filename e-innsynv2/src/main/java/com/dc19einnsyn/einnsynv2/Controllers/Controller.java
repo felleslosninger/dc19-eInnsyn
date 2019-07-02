@@ -1,3 +1,5 @@
+/*
+
 package com.dc19einnsyn.einnsynv2.Controllers;
 
 import com.dc19einnsyn.einnsynv2.packages.Skjerming.Skjerming;
@@ -24,4 +26,3 @@ public class Controller {
     public String yo(){
         return "yo";
     }*/
-}

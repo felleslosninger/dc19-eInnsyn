@@ -1,4 +1,6 @@
 package com.dc19einnsyn.einnsynv2.packages.Saksmappe;
 
-public interface SaksmappeRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface SaksmappeRepository extends JpaRepository<Saksmappe, Long> {
 }

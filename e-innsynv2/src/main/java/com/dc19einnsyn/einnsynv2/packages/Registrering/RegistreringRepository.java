@@ -1,4 +1,6 @@
 package com.dc19einnsyn.einnsynv2.packages.Registrering;
 
-public interface RegistreringRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface RegistreringRepository extends JpaRepository<Registrering, Long> {
 }
