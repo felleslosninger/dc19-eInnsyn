@@ -3,12 +3,11 @@ package com.dc19einnsyn.einnsynv2.packages.Mappe;
 
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @NoArgsConstructor
+@Inheritance(strategy = InheritanceType.JOINED) //Hibernate config for db setup, can be changed for desired structure.
 public class Mappe {
 
     @Id

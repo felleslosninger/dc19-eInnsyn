@@ -5,11 +5,13 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 
 @Entity
 @Data
 @NoArgsConstructor
-
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Registrering {
 
     @Id

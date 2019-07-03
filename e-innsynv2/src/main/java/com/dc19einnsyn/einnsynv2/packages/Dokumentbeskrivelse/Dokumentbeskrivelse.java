@@ -1,11 +1,14 @@
 package com.dc19einnsyn.einnsynv2.packages.Dokumentbeskrivelse;
 
+import com.dc19einnsyn.einnsynv2.packages.Dokumentobjekt.Dokumentobjekt;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 @NoArgsConstructor
@@ -17,6 +20,9 @@ public class Dokumentbeskrivelse {
     @Id
     @GeneratedValue
     private Long dokumentBeskrivelseId;
+
+    @OneToMany(mappedBy = "dokumentbeskrivelse")
+    private Set<Dokumentobjekt> dokumentobjekter;
 
     private String systemID;
     private String dokumentType;
@@ -43,8 +49,8 @@ public class Dokumentbeskrivelse {
     private String elektroniskSignatur;
     private String dokumentobjekt; // Class
 
-
-    public Dokumentbeskrivelse(String systemID, String dokumentType, String dokumentStatus, String tittel, String beskrivelse, String forfatter, String opprettetDato, String opprettetAv, String dokumentMedium, String oppbevaringssted, String referanseArkivedel, String tilknyttetRegistreringSom, Long dokumentNummer, Date tilknyttetDato, String tilknyttetAv, String merknad, String kassasjon, String utfoertKassasjon, String sletting, String skjerming, String gradering, String elektroniskSignatur, String dokumentobjekt) {
+    public Dokumentbeskrivelse(Set<Dokumentobjekt> dokumentobjekter, String systemID, String dokumentType, String dokumentStatus, String tittel, String beskrivelse, String forfatter, String opprettetDato, String opprettetAv, String dokumentMedium, String oppbevaringssted, String referanseArkivedel, String tilknyttetRegistreringSom, Long dokumentNummer, Date tilknyttetDato, String tilknyttetAv, String merknad, String kassasjon, String utfoertKassasjon, String sletting, String skjerming, String gradering, String elektroniskSignatur, String dokumentobjekt) {
+        this.dokumentobjekter = dokumentobjekter;
         this.systemID = systemID;
         this.dokumentType = dokumentType;
         this.dokumentStatus = dokumentStatus;
@@ -68,6 +74,14 @@ public class Dokumentbeskrivelse {
         this.gradering = gradering;
         this.elektroniskSignatur = elektroniskSignatur;
         this.dokumentobjekt = dokumentobjekt;
+    }
+
+    public Set<Dokumentobjekt> getDokumentobjekter() {
+        return dokumentobjekter;
+    }
+
+    public void setDokumentobjekter(Set<Dokumentobjekt> dokumentobjekter) {
+        this.dokumentobjekter = dokumentobjekter;
     }
 
     public Long getDokumentBeskrivelseId() {

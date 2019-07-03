@@ -1,11 +1,10 @@
 package com.dc19einnsyn.einnsynv2.packages.Dokumentobjekt;
 
+import com.dc19einnsyn.einnsynv2.packages.Dokumentbeskrivelse.Dokumentbeskrivelse;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -16,6 +15,10 @@ public class Dokumentobjekt {
     @Id
     @GeneratedValue
     private Long dokumentObjektId;
+
+    @ManyToOne
+    @JoinColumn(name = "dokument_beskrivelse_id")
+    private Dokumentbeskrivelse dokumentbeskrivelse;
 
     private Long versjonsnummer;
     private String variantformat;
@@ -30,7 +33,8 @@ public class Dokumentobjekt {
     private String elektroniskSignatur;
     private String konvertering;
 
-    public Dokumentobjekt(Long versjonsnummer, String variantformat, String format, String formatDetaljer, Date oprettetDato, String opprettetAv, String referanseDokumentfil, String sjekksum, String sjekksumAlgoritme, String filstoerrelse, String elektroniskSignatur, String konvertering) {
+    public Dokumentobjekt(Dokumentbeskrivelse dokumentbeskrivelse, Long versjonsnummer, String variantformat, String format, String formatDetaljer, Date oprettetDato, String opprettetAv, String referanseDokumentfil, String sjekksum, String sjekksumAlgoritme, String filstoerrelse, String elektroniskSignatur, String konvertering) {
+        this.dokumentbeskrivelse = dokumentbeskrivelse;
         this.versjonsnummer = versjonsnummer;
         this.variantformat = variantformat;
         this.format = format;
@@ -43,6 +47,14 @@ public class Dokumentobjekt {
         this.filstoerrelse = filstoerrelse;
         this.elektroniskSignatur = elektroniskSignatur;
         this.konvertering = konvertering;
+    }
+
+    public Dokumentbeskrivelse getDokumentbeskrivelse() {
+        return dokumentbeskrivelse;
+    }
+
+    public void setDokumentbeskrivelse(Dokumentbeskrivelse dokumentbeskrivelse) {
+        this.dokumentbeskrivelse = dokumentbeskrivelse;
     }
 
     public Long getDokumentObjektId() {
