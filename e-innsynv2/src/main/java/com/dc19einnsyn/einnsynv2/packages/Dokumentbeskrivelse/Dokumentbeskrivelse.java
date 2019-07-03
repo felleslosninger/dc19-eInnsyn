@@ -14,8 +14,6 @@ import java.util.Set;
 @NoArgsConstructor
 public class Dokumentbeskrivelse {
 
-
-
     //@GeneratedValue after db connect
     @Id
     @GeneratedValue

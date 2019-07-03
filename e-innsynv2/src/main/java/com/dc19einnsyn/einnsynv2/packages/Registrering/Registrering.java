@@ -1,12 +1,11 @@
 package com.dc19einnsyn.einnsynv2.packages.Registrering;
 
+import com.dc19einnsyn.einnsynv2.packages.Korrespondansepart.Korrespondansepart;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Data
@@ -17,6 +16,8 @@ public class Registrering {
     @Id
     private Long registreringsID;
 
+    @OneToMany(mappedBy = "registrering")
+    private Set<Korrespondansepart> korrespondanseparter;
 
     private String systemID;
     private String opprettetDato;
@@ -47,8 +48,9 @@ public class Registrering {
     private String merknad;
     private String kryssreferanse;
 
-    public Registrering(Long registreringsID, String systemID, String opprettetDato, String opprettetAv, String arkivertDato, String arkivertAv, String referanseArkivdel, String kassasjon, String skjerming, String gradering, String dokumentbeskrivelse, String dokumentobjekt, String korrespondansepart, String tittel, String offentligTittel, String beskrivelse, String noekkelord, String forfatter, String dokumentmedium, String oppbevaringssted, String virksomhetsspesifikkeMetadata, String merknad, String kryssreferanse) {
+    public Registrering(Long registreringsID, Set<Korrespondansepart> korrespondanseparter, String systemID, String opprettetDato, String opprettetAv, String arkivertDato, String arkivertAv, String referanseArkivdel, String kassasjon, String skjerming, String gradering, String dokumentbeskrivelse, String dokumentobjekt, String korrespondansepart, String tittel, String offentligTittel, String beskrivelse, String noekkelord, String forfatter, String dokumentmedium, String oppbevaringssted, String virksomhetsspesifikkeMetadata, String merknad, String kryssreferanse) {
         this.registreringsID = registreringsID;
+        this.korrespondanseparter = korrespondanseparter;
         this.systemID = systemID;
         this.opprettetDato = opprettetDato;
         this.opprettetAv = opprettetAv;
@@ -71,6 +73,14 @@ public class Registrering {
         this.virksomhetsspesifikkeMetadata = virksomhetsspesifikkeMetadata;
         this.merknad = merknad;
         this.kryssreferanse = kryssreferanse;
+    }
+
+    public Set<Korrespondansepart> getKorrespondanseparter() {
+        return korrespondanseparter;
+    }
+
+    public void setKorrespondanseparter(Set<Korrespondansepart> korrespondanseparter) {
+        this.korrespondanseparter = korrespondanseparter;
     }
 
     public Long getRegistreringsID() {

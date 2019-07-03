@@ -1,11 +1,10 @@
 package com.dc19einnsyn.einnsynv2.packages.Korrespondansepart;
 
+import com.dc19einnsyn.einnsynv2.packages.Registrering.Registrering;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Data
@@ -15,6 +14,10 @@ public class Korrespondansepart {
     @Id
     @GeneratedValue
     private long korrespondansePartId;
+
+    @ManyToOne
+    @JoinColumn(name = "registrering_id")
+    private Registrering registrering;
 
     private String korrespondanseparttype;
     private String korrespondansepartNavn;
@@ -30,8 +33,8 @@ public class Korrespondansepart {
     private String korrespondansepartEnhetstype;
     private String organisasjonsnummer;
 
-
-    public Korrespondansepart(String korrespondanseparttype, String korrespondansepartNavn, String postadresse, String postnummer, String poststed, String land, String epostadresse, String telefonnummer, String kontaktparson, String administrativEnhet, String saksbehandler, String korrespondansepartEnhetstype, String organisasjonsnummer) {
+    public Korrespondansepart(Registrering registrering, String korrespondanseparttype, String korrespondansepartNavn, String postadresse, String postnummer, String poststed, String land, String epostadresse, String telefonnummer, String kontaktparson, String administrativEnhet, String saksbehandler, String korrespondansepartEnhetstype, String organisasjonsnummer) {
+        this.registrering = registrering;
         this.korrespondanseparttype = korrespondanseparttype;
         this.korrespondansepartNavn = korrespondansepartNavn;
         this.postadresse = postadresse;
@@ -45,6 +48,14 @@ public class Korrespondansepart {
         this.saksbehandler = saksbehandler;
         this.korrespondansepartEnhetstype = korrespondansepartEnhetstype;
         this.organisasjonsnummer = organisasjonsnummer;
+    }
+
+    public Registrering getRegistrering() {
+        return registrering;
+    }
+
+    public void setRegistrering(Registrering registrering) {
+        this.registrering = registrering;
     }
 
     public long getKorrespondansePartId() {
