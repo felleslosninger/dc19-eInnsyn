@@ -1,19 +1,40 @@
 package com.dc19einnsyn.einnsynv2.packages.Registrering;
 
+import com.dc19einnsyn.einnsynv2.packages.Dokumentbeskrivelse.Dokumentbeskrivelse;
+import com.dc19einnsyn.einnsynv2.packages.Korrespondansepart.Korrespondansepart;
+import com.dc19einnsyn.einnsynv2.packages.Mappe.Mappe;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Data
 @NoArgsConstructor
-
+@Table
 public class Registrering {
+
+    @ManyToOne
+    @JoinColumn(name = "mappe_id")
+    private Mappe mappe;
 
     @Id
     private Long registreringsID;
+
+    @OneToMany(
+            mappedBy = "registrering",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    private Set<Dokumentbeskrivelse> dokumentbeskrivelser;
+
+    @OneToMany(
+            mappedBy = "registrering",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    private Set<Korrespondansepart> korrespondanseparter;
 
 
     private String systemID;
