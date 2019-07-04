@@ -14,7 +14,7 @@ import org.eclipse.rdf4j.rio.RDFParser;
 import org.eclipse.rdf4j.rio.RDFWriter;
 import org.eclipse.rdf4j.rio.Rio;
 import org.eclipse.rdf4j.rio.helpers.StatementCollector;
-//import org.junit.Test;
+import org.junit.Test;
 
 import com.github.jsonldjava.core.JsonLdOptions;
 import com.github.jsonldjava.core.JsonLdProcessor;
@@ -24,8 +24,8 @@ import com.google.common.base.Charsets;
 
 public class HowToConvertRdfToJson {
 
-    //@Test
-    public static void convertRdfToPrettyJson() {
+    @Test
+    public void convertRdfToPrettyJson() {
         try (InputStream in = Thread.currentThread().getContextClassLoader().getResourceAsStream("litenfil.ttl")) {
             System.out.println(getPrettyJsonLdString(in, RDFFormat.TURTLE));
         } catch (Exception e) {
@@ -38,10 +38,29 @@ public class HowToConvertRdfToJson {
                 readRdfToString(in, format, RDFFormat.JSONLD, ""));
     }
 
-    public static String getPrettyJsonLdString(Collection<Statement> statements) {
-        return getPrettyJsonLdString(
-                graphToString(statements, RDFFormat.JSONLD));
+    public static String readRdfToString(InputStream in, RDFFormat inf,
+                                         RDFFormat outf, String baseUrl) {
+        Collection<Statement> myGraph = null;
+        myGraph = readRdfToGraph(in, inf, baseUrl);
+        return graphToString(myGraph, outf);
     }
+
+    public static String graphToString(Collection<Statement> myGraph,
+                                       RDFFormat outf) {
+        StringWriter out = new StringWriter();
+        RDFWriter writer = Rio.createWriter(outf, out);
+        try {
+            writer.startRDF();
+            for (Statement st : myGraph) {
+                writer.handleStatement(st);
+            }
+            writer.endRDF();
+        } catch (RDFHandlerException e) {
+            throw new RuntimeException(e);
+        }
+        return out.getBuffer().toString();
+    }
+
 
     private static String getPrettyJsonLdString(String rdfGraphAsJson) {
         try {
@@ -58,6 +77,7 @@ public class HowToConvertRdfToJson {
         }
     }
 
+
     private static Map<String, Object> removeGraphArray(Map<String, Object> framedJson) {
         List<Map<String, Object>> graph = (List<Map<String, Object>>) framedJson.get("@graph");
         return graph.get(0);
@@ -73,9 +93,7 @@ public class HowToConvertRdfToJson {
 
     private static Map<String, Object> getFrame() {
         Map<String, Object> context = new HashMap<>();
-        System.out.println("Her er konteksten: " + context.toString());
         context.put("@context", "http://schema.org/");
-        System.out.println("Her er konteksten: " + context.toString());
         return context;
     }
 
@@ -102,27 +120,9 @@ public class HowToConvertRdfToJson {
             throw new RuntimeException(e);
         }
     }
-
-    public static String readRdfToString(InputStream in, RDFFormat inf,
-                                         RDFFormat outf, String baseUrl) {
-        Collection<Statement> myGraph = null;
-        myGraph = readRdfToGraph(in, inf, baseUrl);
-        return graphToString(myGraph, outf);
-    }
-
-    public static String graphToString(Collection<Statement> myGraph,
-                                       RDFFormat outf) {
-        StringWriter out = new StringWriter();
-        RDFWriter writer = Rio.createWriter(outf, out);
-        try {
-            writer.startRDF();
-            for (Statement st : myGraph) {
-                writer.handleStatement(st);
-            }
-            writer.endRDF();
-        } catch (RDFHandlerException e) {
-            throw new RuntimeException(e);
-        }
-        return out.getBuffer().toString();
+    public static String getPrettyJsonLdString(Collection<Statement> statements) {
+        return getPrettyJsonLdString(
+                graphToString(statements, RDFFormat.JSONLD));
     }
 }
+
