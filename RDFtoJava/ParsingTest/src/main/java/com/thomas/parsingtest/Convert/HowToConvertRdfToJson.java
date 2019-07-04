@@ -1,13 +1,12 @@
 package com.thomas.parsingtest.Convert;
 
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
-import java.io.StringWriter;
+import java.io.*;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Statement;
 import org.eclipse.rdf4j.rio.RDFFormat;
 import org.eclipse.rdf4j.rio.RDFHandlerException;
@@ -15,7 +14,7 @@ import org.eclipse.rdf4j.rio.RDFParser;
 import org.eclipse.rdf4j.rio.RDFWriter;
 import org.eclipse.rdf4j.rio.Rio;
 import org.eclipse.rdf4j.rio.helpers.StatementCollector;
-import org.junit.Test;
+//import org.junit.Test;
 
 import com.github.jsonldjava.core.JsonLdOptions;
 import com.github.jsonldjava.core.JsonLdProcessor;
@@ -25,29 +24,20 @@ import com.google.common.base.Charsets;
 
 public class HowToConvertRdfToJson {
 
-    @Test
-    public void convertRdfToPrettyJson() {
-        try (InputStream in = Thread.currentThread().getContextClassLoader().getResourceAsStream("../Data/kortfil.ttl")) {
+    //@Test
+    public static void convertRdfToPrettyJson() {
+        try (InputStream in = Thread.currentThread().getContextClassLoader().getResourceAsStream("litenfil.ttl")) {
             System.out.println(getPrettyJsonLdString(in, RDFFormat.TURTLE));
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
 
-    /**
-     * @param in     Input stream with rdf data
-     * @param format format of the rdf data
-     * @return a pretty JSON document as String
-     */
     public static String getPrettyJsonLdString(InputStream in, RDFFormat format) {
         return getPrettyJsonLdString(
                 readRdfToString(in, format, RDFFormat.JSONLD, ""));
     }
 
-    /**
-     * @param statements rdf statements collected
-     * @return a pretty JSON document as String
-     */
     public static String getPrettyJsonLdString(Collection<Statement> statements) {
         return getPrettyJsonLdString(
                 graphToString(statements, RDFFormat.JSONLD));
@@ -83,7 +73,9 @@ public class HowToConvertRdfToJson {
 
     private static Map<String, Object> getFrame() {
         Map<String, Object> context = new HashMap<>();
+        System.out.println("Her er konteksten: " + context.toString());
         context.put("@context", "http://schema.org/");
+        System.out.println("Her er konteksten: " + context.toString());
         return context;
     }
 

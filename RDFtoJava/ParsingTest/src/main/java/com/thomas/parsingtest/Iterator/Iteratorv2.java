@@ -18,7 +18,7 @@ public class Iteratorv2 {
 
     public static void iteratorv2() throws IOException {
 
-        InputStream in = new FileInputStream(new File("C:\\Users\\camp-tvy\\Documents\\ProsjektTest\\Data\\kortfil.ttl"));
+        InputStream in = new FileInputStream(new File("C:\\Users\\camp-rgu\\Documents\\Dumpfil\\litenfil.ttl"));
         String baseURI = in.toString();
         Model model = Rio.parse(in, baseURI, RDFFormat.TURTLE);
 
