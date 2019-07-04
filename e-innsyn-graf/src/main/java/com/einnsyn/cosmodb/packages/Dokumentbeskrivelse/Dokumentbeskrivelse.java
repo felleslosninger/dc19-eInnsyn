@@ -1,7 +1,7 @@
 package com.einnsyn.cosmodb.packages.Dokumentbeskrivelse;
 
-import com.dc19einnsyn.einnsynv2.packages.Dokumentobjekt.Dokumentobjekt;
-import com.dc19einnsyn.einnsynv2.packages.Registrering.Registrering;
+import com.einnsyn.cosmodb.packages.Dokumentobjekt.Dokumentobjekt;
+import com.einnsyn.cosmodb.packages.Registrering.Registrering;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;

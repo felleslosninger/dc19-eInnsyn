@@ -1,9 +1,9 @@
 package com.einnsyn.cosmodb.packages.Registrering;
 
-import com.dc19einnsyn.einnsynv2.packages.Dokumentbeskrivelse.Dokumentbeskrivelse;
-import com.dc19einnsyn.einnsynv2.packages.Korrespondansepart.Korrespondansepart;
-import com.dc19einnsyn.einnsynv2.packages.Mappe.Mappe;
-import com.dc19einnsyn.einnsynv2.packages.Skjerming.Skjerming;
+import com.einnsyn.cosmodb.packages.Dokumentbeskrivelse.Dokumentbeskrivelse;
+import com.einnsyn.cosmodb.packages.Korrespondansepart.Korrespondansepart;
+import com.einnsyn.cosmodb.packages.Mappe.Mappe;
+import com.einnsyn.cosmodb.packages.Skjerming.Skjerming;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

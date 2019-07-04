@@ -1,6 +1,6 @@
 package com.einnsyn.cosmodb.packages.Dokumentobjekt;
 
-import com.dc19einnsyn.einnsynv2.packages.Dokumentbeskrivelse.Dokumentbeskrivelse;
+import com.einnsyn.cosmodb.packages.Dokumentbeskrivelse.Dokumentbeskrivelse;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
