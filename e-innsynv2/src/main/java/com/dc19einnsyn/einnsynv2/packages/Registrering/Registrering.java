@@ -21,7 +21,7 @@ public class Registrering {
     private Mappe mappe;
 
     @OneToOne(mappedBy = "registrering",
-            cascade = CascadeType.ALL,
+            cascade = CascadeType.ALL, //foreløpig uvist hva denne gjør
             fetch = FetchType.LAZY,
             optional = false
     )
@@ -29,7 +29,7 @@ public class Registrering {
 
     @OneToMany(
             mappedBy = "registrering",
-            cascade = CascadeType.ALL,
+            cascade = CascadeType.ALL, //foreløpig uvist hva denne gjør
             orphanRemoval = true
     )
     private Set<Dokumentbeskrivelse> dokumentbeskrivelser;
@@ -51,14 +51,12 @@ public class Registrering {
     private String referanseArkivdel;
 
     private String kassasjon;
-    //private String skjerming;
     private String gradering;
 
     private String dokumentbeskrivelse;
     private String dokumentobjekt;
 
     private String korrespondansepart;
-
 
     private String tittel;
     private String offentligTittel;
@@ -72,7 +70,11 @@ public class Registrering {
     private String merknad;
     private String kryssreferanse;
 
-    public Registrering(Long registreringsID, String systemID, String opprettetDato, String opprettetAv, String arkivertDato, String arkivertAv, String referanseArkivdel, String kassasjon, String skjerming, String gradering, String dokumentbeskrivelse, String dokumentobjekt, String korrespondansepart, String tittel, String offentligTittel, String beskrivelse, String noekkelord, String forfatter, String dokumentmedium, String oppbevaringssted, String virksomhetsspesifikkeMetadata, String merknad, String kryssreferanse) {
+    public Registrering(Mappe mappe, Skjerming skjerming, Set<Dokumentbeskrivelse> dokumentbeskrivelser, Set<Korrespondansepart> korrespondanseparter, Long registreringsID, String systemID, String opprettetDato, String opprettetAv, String arkivertDato, String arkivertAv, String referanseArkivdel, String kassasjon, String gradering, String dokumentbeskrivelse, String dokumentobjekt, String korrespondansepart, String tittel, String offentligTittel, String beskrivelse, String noekkelord, String forfatter, String dokumentmedium, String oppbevaringssted, String virksomhetsspesifikkeMetadata, String merknad, String kryssreferanse) {
+        this.mappe = mappe;
+        this.skjerming = skjerming;
+        this.dokumentbeskrivelser = dokumentbeskrivelser;
+        this.korrespondanseparter = korrespondanseparter;
         this.registreringsID = registreringsID;
         this.systemID = systemID;
         this.opprettetDato = opprettetDato;
@@ -81,7 +83,6 @@ public class Registrering {
         this.arkivertAv = arkivertAv;
         this.referanseArkivdel = referanseArkivdel;
         this.kassasjon = kassasjon;
-        //this.skjerming = skjerming;
         this.gradering = gradering;
         this.dokumentbeskrivelse = dokumentbeskrivelse;
         this.dokumentobjekt = dokumentobjekt;
@@ -96,6 +97,38 @@ public class Registrering {
         this.virksomhetsspesifikkeMetadata = virksomhetsspesifikkeMetadata;
         this.merknad = merknad;
         this.kryssreferanse = kryssreferanse;
+    }
+
+    public Mappe getMappe() {
+        return mappe;
+    }
+
+    public void setMappe(Mappe mappe) {
+        this.mappe = mappe;
+    }
+
+    public Skjerming getSkjerming() {
+        return skjerming;
+    }
+
+    public void setSkjerming(Skjerming skjerming) {
+        this.skjerming = skjerming;
+    }
+
+    public Set<Dokumentbeskrivelse> getDokumentbeskrivelser() {
+        return dokumentbeskrivelser;
+    }
+
+    public void setDokumentbeskrivelser(Set<Dokumentbeskrivelse> dokumentbeskrivelser) {
+        this.dokumentbeskrivelser = dokumentbeskrivelser;
+    }
+
+    public Set<Korrespondansepart> getKorrespondanseparter() {
+        return korrespondanseparter;
+    }
+
+    public void setKorrespondanseparter(Set<Korrespondansepart> korrespondanseparter) {
+        this.korrespondanseparter = korrespondanseparter;
     }
 
     public Long getRegistreringsID() {
@@ -162,14 +195,6 @@ public class Registrering {
         this.kassasjon = kassasjon;
     }
 
-    /*public String getSkjerming() {
-        return skjerming;
-    }
-
-    public void setSkjerming(String skjerming) {
-        this.skjerming = skjerming;
-    }
-*/
     public String getGradering() {
         return gradering;
     }
@@ -281,8 +306,4 @@ public class Registrering {
     public void setKryssreferanse(String kryssreferanse) {
         this.kryssreferanse = kryssreferanse;
     }
-
-// Set<Korrespondansepart> korrespondanseparter;
-    //Set<Dokumentbeskrivelse> dokumentbeskrivelser;
-    //Set<Skjerming> skjerminger;
 }

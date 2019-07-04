@@ -1,15 +1,19 @@
 package com.dc19einnsyn.einnsynv2.packages.Journalpost;
 
+import com.dc19einnsyn.einnsynv2.packages.Dokumentbeskrivelse.Dokumentbeskrivelse;
+import com.dc19einnsyn.einnsynv2.packages.Korrespondansepart.Korrespondansepart;
+import com.dc19einnsyn.einnsynv2.packages.Mappe.Mappe;
 import com.dc19einnsyn.einnsynv2.packages.Registrering.Registrering;
+import com.dc19einnsyn.einnsynv2.packages.Skjerming.Skjerming;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 @NoArgsConstructor
 public class Journalpost extends Registrering {
-
 
 
     private Integer journalaar;
@@ -33,8 +37,8 @@ public class Journalpost extends Registrering {
     private String elektroniskSignatur;
     private String foelgsakenreferanse;
 
-    public Journalpost(Long registreringsID, String systemID, String opprettetDato, String opprettetAv, String arkivertDato, String arkivertAv, String referanseArkivdel, String kassasjon, String skjerming, String gradering, String dokumentbeskrivelse, String dokumentobjekt, String korrespondansepart, String tittel, String offentligTittel, String beskrivelse, String noekkelord, String forfatter, String dokumentmedium, String oppbevaringssted, String virksomhetsspesifikkeMetadata, String merknad, String kryssreferanse, Integer journalaar, Long journalsekvensnummer, Integer journalpostnummer, String journalposttype, String journalstatus, Date journaldato, Date dokumentetsDato, Date mottattDato, Date sendtDato, Date forfallsdato, Date offentlighetsvurdertDato, Integer antallVedlegg, Date utlaantDato, String utlaantTil, String journalenhet, String avskrivning, String dokumentflyt, String presedens, String elektroniskSignatur, String foelgsakenreferanse) {
-        super(registreringsID, systemID, opprettetDato, opprettetAv, arkivertDato, arkivertAv, referanseArkivdel, kassasjon, skjerming, gradering, dokumentbeskrivelse, dokumentobjekt, korrespondansepart, tittel, offentligTittel, beskrivelse, noekkelord, forfatter, dokumentmedium, oppbevaringssted, virksomhetsspesifikkeMetadata, merknad, kryssreferanse);
+    public Journalpost(Mappe mappe, Skjerming skjerming, Set<Dokumentbeskrivelse> dokumentbeskrivelser, Set<Korrespondansepart> korrespondanseparter, Long registreringsID, String systemID, String opprettetDato, String opprettetAv, String arkivertDato, String arkivertAv, String referanseArkivdel, String kassasjon, String gradering, String dokumentbeskrivelse, String dokumentobjekt, String korrespondansepart, String tittel, String offentligTittel, String beskrivelse, String noekkelord, String forfatter, String dokumentmedium, String oppbevaringssted, String virksomhetsspesifikkeMetadata, String merknad, String kryssreferanse, Integer journalaar, Long journalsekvensnummer, Integer journalpostnummer, String journalposttype, String journalstatus, Date journaldato, Date dokumentetsDato, Date mottattDato, Date sendtDato, Date forfallsdato, Date offentlighetsvurdertDato, Integer antallVedlegg, Date utlaantDato, String utlaantTil, String journalenhet, String avskrivning, String dokumentflyt, String presedens, String elektroniskSignatur, String foelgsakenreferanse) {
+        super(mappe, skjerming, dokumentbeskrivelser, korrespondanseparter, registreringsID, systemID, opprettetDato, opprettetAv, arkivertDato, arkivertAv, referanseArkivdel, kassasjon, gradering, dokumentbeskrivelse, dokumentobjekt, korrespondansepart, tittel, offentligTittel, beskrivelse, noekkelord, forfatter, dokumentmedium, oppbevaringssted, virksomhetsspesifikkeMetadata, merknad, kryssreferanse);
         this.journalaar = journalaar;
         this.journalsekvensnummer = journalsekvensnummer;
         this.journalpostnummer = journalpostnummer;
@@ -217,9 +221,6 @@ public class Journalpost extends Registrering {
         this.foelgsakenreferanse = foelgsakenreferanse;
     }
 }
-
-
-
 /*
 *<xs:element name="journalaar" type="n5mdk:journalaar" minOccurs="0"/>
                     <xs:element name="journalsekvensnummer" type="n5mdk:journalsekvensnummer" minOccurs="0"/>

@@ -9,13 +9,12 @@ import java.util.Set;
 
 @Entity
 @NoArgsConstructor
-@Table
 public class Mappe {
 
     @OneToMany(
             mappedBy = "mappe",
-            cascade = CascadeType.ALL,
-            orphanRemoval = true
+            cascade = CascadeType.ALL, //foreløpig uvist hva denne gjør
+            orphanRemoval = true //foreløpig uvist hva denne gjør
     )
     private Set<Registrering> registreringer;
 
@@ -46,7 +45,8 @@ public class Mappe {
     private String Saksmappe; //Class
     private String Journalpost; //Class
 
-    public Mappe(String systemID, String tittel, String offentligTittel, String beskrivelse, String noekkelord, String dokumentmedium, String oppbevaringssted, String opprettetDato, String opprettetAv, String avsluttetDato, String avsluttetAv, String referanseArkivdel, String virksomhetsspesifikkeMetadata, String kryssreferanse, String merknad, String kassasjon, String gradering, String skjerming, String mappe, String registrering, String saksmappe, String journalpost) {
+    public Mappe(Set<Registrering> registreringer, String systemID, String tittel, String offentligTittel, String beskrivelse, String noekkelord, String dokumentmedium, String oppbevaringssted, String opprettetDato, String opprettetAv, String avsluttetDato, String avsluttetAv, String referanseArkivdel, String virksomhetsspesifikkeMetadata, String kryssreferanse, String merknad, String kassasjon, String gradering, String skjerming, String mappe, String registrering, String saksmappe, String journalpost) {
+        this.registreringer = registreringer;
         this.systemID = systemID;
         this.tittel = tittel;
         this.offentligTittel = offentligTittel;
@@ -65,10 +65,18 @@ public class Mappe {
         this.kassasjon = kassasjon;
         this.gradering = gradering;
         this.skjerming = skjerming;
-       Mappe = mappe;
-       Registrering = registrering;
-       Saksmappe = saksmappe;
-       Journalpost = journalpost;
+        Mappe = mappe;
+        Registrering = registrering;
+        Saksmappe = saksmappe;
+        Journalpost = journalpost;
+    }
+
+    public Set<Registrering> getRegistreringer() {
+        return registreringer;
+    }
+
+    public void setRegistreringer(Set<Registrering> registreringer) {
+        this.registreringer = registreringer;
     }
 
     public Long getMappeID() {
@@ -254,11 +262,4 @@ public class Mappe {
     public void setJournalpost(String journalpost) {
         Journalpost = journalpost;
     }
-
-
-    //private Skjerming skjerming;
-    // private Mappe mappe;
-    // private Set<Registrering> registrering;
-    //private Set<Saksmappe> saksmapper;
-    //private Set<Journalpost> jounalposter;
 }
