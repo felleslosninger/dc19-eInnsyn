@@ -1,4 +1,4 @@
-package com.dc19einnsyn.einnsynv2.packages.Registrering;
+package com.einnsyn.cosmodb.packages.Registrering;
 
 import com.dc19einnsyn.einnsynv2.packages.Dokumentbeskrivelse.Dokumentbeskrivelse;
 import com.dc19einnsyn.einnsynv2.packages.Korrespondansepart.Korrespondansepart;
@@ -8,7 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.ArrayList;
+import java.util.Set;
 
 @Entity
 @Data
@@ -32,14 +32,14 @@ public class Registrering {
             cascade = CascadeType.ALL, //foreløpig uvist hva denne gjør
             orphanRemoval = true
     )
-    private ArrayList<Dokumentbeskrivelse> dokumentbeskrivelser;
+    private Set<Dokumentbeskrivelse> dokumentbeskrivelser;
 
     @OneToMany(
             mappedBy = "registrering",
             cascade = CascadeType.ALL,
             orphanRemoval = true
     )
-    private ArrayList<Korrespondansepart> korrespondanseparter;
+    private Set<Korrespondansepart> korrespondanseparter;
 
     @Id
     private Long registreringsID;
@@ -70,7 +70,7 @@ public class Registrering {
     private String merknad;
     private String kryssreferanse;
 
-    public Registrering(Mappe mappe, Skjerming skjerming, ArrayList<Dokumentbeskrivelse> dokumentbeskrivelser, ArrayList<Korrespondansepart> korrespondanseparter, Long registreringsID, String systemID, String opprettetDato, String opprettetAv, String arkivertDato, String arkivertAv, String referanseArkivdel, String kassasjon, String gradering, String dokumentbeskrivelse, String dokumentobjekt, String korrespondansepart, String tittel, String offentligTittel, String beskrivelse, String noekkelord, String forfatter, String dokumentmedium, String oppbevaringssted, String virksomhetsspesifikkeMetadata, String merknad, String kryssreferanse) {
+    public Registrering(Mappe mappe, Skjerming skjerming, Set<Dokumentbeskrivelse> dokumentbeskrivelser, Set<Korrespondansepart> korrespondanseparter, Long registreringsID, String systemID, String opprettetDato, String opprettetAv, String arkivertDato, String arkivertAv, String referanseArkivdel, String kassasjon, String gradering, String dokumentbeskrivelse, String dokumentobjekt, String korrespondansepart, String tittel, String offentligTittel, String beskrivelse, String noekkelord, String forfatter, String dokumentmedium, String oppbevaringssted, String virksomhetsspesifikkeMetadata, String merknad, String kryssreferanse) {
         this.mappe = mappe;
         this.skjerming = skjerming;
         this.dokumentbeskrivelser = dokumentbeskrivelser;
@@ -115,19 +115,19 @@ public class Registrering {
         this.skjerming = skjerming;
     }
 
-    public ArrayList<Dokumentbeskrivelse> getDokumentbeskrivelser() {
+    public Set<Dokumentbeskrivelse> getDokumentbeskrivelser() {
         return dokumentbeskrivelser;
     }
 
-    public void setDokumentbeskrivelser(ArrayList<Dokumentbeskrivelse> dokumentbeskrivelser) {
+    public void setDokumentbeskrivelser(Set<Dokumentbeskrivelse> dokumentbeskrivelser) {
         this.dokumentbeskrivelser = dokumentbeskrivelser;
     }
 
-    public ArrayList<Korrespondansepart> getKorrespondanseparter() {
+    public Set<Korrespondansepart> getKorrespondanseparter() {
         return korrespondanseparter;
     }
 
-    public void setKorrespondanseparter(ArrayList<Korrespondansepart> korrespondanseparter) {
+    public void setKorrespondanseparter(Set<Korrespondansepart> korrespondanseparter) {
         this.korrespondanseparter = korrespondanseparter;
     }
 

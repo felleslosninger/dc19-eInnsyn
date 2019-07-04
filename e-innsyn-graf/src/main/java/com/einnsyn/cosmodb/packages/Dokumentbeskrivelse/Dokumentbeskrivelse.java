@@ -1,4 +1,4 @@
-package com.dc19einnsyn.einnsynv2.packages.Dokumentbeskrivelse;
+package com.einnsyn.cosmodb.packages.Dokumentbeskrivelse;
 
 import com.dc19einnsyn.einnsynv2.packages.Dokumentobjekt.Dokumentobjekt;
 import com.dc19einnsyn.einnsynv2.packages.Registrering.Registrering;
@@ -6,7 +6,6 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -22,7 +21,7 @@ public class Dokumentbeskrivelse {
             cascade = CascadeType.ALL, //foreløbig uvist hva denne gjør
             orphanRemoval = true // foreløpig uvist hva denne gjør
     )
-    private Set<Dokumentobjekt> dokumentobjekt = new HashSet<>();
+    private Set<Dokumentobjekt> dokumentobjekt;
 
     @Id
     @GeneratedValue
@@ -78,7 +77,6 @@ public class Dokumentbeskrivelse {
         this.gradering = gradering;
         this.elektroniskSignatur = elektroniskSignatur;
     }
-
 
     public Registrering getRegistrering() {
         return registrering;

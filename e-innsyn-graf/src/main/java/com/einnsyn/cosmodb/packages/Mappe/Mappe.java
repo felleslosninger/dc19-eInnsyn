@@ -1,11 +1,10 @@
-package com.dc19einnsyn.einnsynv2.packages.Mappe;
+package com.einnsyn.cosmodb.packages.Mappe;
 
 
-import com.dc19einnsyn.einnsynv2.packages.Registrering.Registrering;
+import com.einnsyn.cosmodb.packages.Registrering.Registrering;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -17,7 +16,7 @@ public class Mappe {
             cascade = CascadeType.ALL, //foreløpig uvist hva denne gjør
             orphanRemoval = true //foreløpig uvist hva denne gjør
     )
-    private Set<Registrering> registreringer = new HashSet<>();
+    private Set<Registrering> registreringer;
 
     @Id
     @GeneratedValue
@@ -46,7 +45,7 @@ public class Mappe {
     private String Saksmappe; //Class
     private String Journalpost; //Class
 
-    public Mappe(Set<com.dc19einnsyn.einnsynv2.packages.Registrering.Registrering> registreringer, String systemID, String tittel, String offentligTittel, String beskrivelse, String noekkelord, String dokumentmedium, String oppbevaringssted, String opprettetDato, String opprettetAv, String avsluttetDato, String avsluttetAv, String referanseArkivdel, String virksomhetsspesifikkeMetadata, String kryssreferanse, String merknad, String kassasjon, String gradering, String skjerming, String mappe, String registrering, String saksmappe, String journalpost) {
+    public Mappe(Set<Registrering> registreringer, String systemID, String tittel, String offentligTittel, String beskrivelse, String noekkelord, String dokumentmedium, String oppbevaringssted, String opprettetDato, String opprettetAv, String avsluttetDato, String avsluttetAv, String referanseArkivdel, String virksomhetsspesifikkeMetadata, String kryssreferanse, String merknad, String kassasjon, String gradering, String skjerming, String mappe, String registrering, String saksmappe, String journalpost) {
         this.registreringer = registreringer;
         this.systemID = systemID;
         this.tittel = tittel;
@@ -72,11 +71,11 @@ public class Mappe {
         Journalpost = journalpost;
     }
 
-    public Set<com.dc19einnsyn.einnsynv2.packages.Registrering.Registrering> getRegistreringer() {
+    public Set<Registrering> getRegistreringer() {
         return registreringer;
     }
 
-    public void setRegistreringer(Set<com.dc19einnsyn.einnsynv2.packages.Registrering.Registrering> registreringer) {
+    public void setRegistreringer(Set<Registrering> registreringer) {
         this.registreringer = registreringer;
     }
 

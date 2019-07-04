@@ -1,4 +1,4 @@
-package com.dc19einnsyn.einnsynv2.packages.Skjerming;
+package com.einnsyn.cosmodb.packages.Skjerming;
 
 import com.dc19einnsyn.einnsynv2.packages.Registrering.Registrering;
 import lombok.NoArgsConstructor;
@@ -8,6 +8,7 @@ import javax.persistence.*;
 @Entity
 @NoArgsConstructor
 public class Skjerming {
+
 
         @OneToOne(fetch = FetchType.LAZY)
         @JoinColumn(name = "registrering_id")

@@ -1,16 +1,15 @@
-package com.dc19einnsyn.einnsynv2.packages.Saksmappe;
+package com.einnsyn.cosmodb.packages.Saksmappe;
 
 import com.dc19einnsyn.einnsynv2.packages.Mappe.Mappe;
-import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.exception.DataException;
+import com.dc19einnsyn.einnsynv2.packages.Registrering.Registrering;
 
 import javax.persistence.Entity;
 import java.util.Date;
 import java.util.Set;
 
 @Entity
-@Data
 @NoArgsConstructor
 public class Saksmappe extends Mappe {
 
@@ -27,7 +26,7 @@ public class Saksmappe extends Mappe {
     private String sakspart;
     private String presidens;
 
-    public Saksmappe(Set<com.dc19einnsyn.einnsynv2.packages.Registrering.Registrering> registreringer, String systemID, String tittel, String offentligTittel, String beskrivelse, String noekkelord, String dokumentmedium, String oppbevaringssted, String opprettetDato, String opprettetAv, String avsluttetDato, String avsluttetAv, String referanseArkivdel, String virksomhetsspesifikkeMetadata, String kryssreferanse, String merknad, String kassasjon, String gradering, String skjerming, String mappe, String registrering, String saksmappe, String journalpost, Integer saksaar, Long sakssekvensnummer, DataException saksdato, String administrativEnhet, String saksansvarlig, String journalenhet, String saksstatus, Date utlaantDato, String utlaantTil, String referanseSekundaerKassifikasjon, String sakspart, String presidens) {
+    public Saksmappe(Set<Registrering> registreringer, String systemID, String tittel, String offentligTittel, String beskrivelse, String noekkelord, String dokumentmedium, String oppbevaringssted, String opprettetDato, String opprettetAv, String avsluttetDato, String avsluttetAv, String referanseArkivdel, String virksomhetsspesifikkeMetadata, String kryssreferanse, String merknad, String kassasjon, String gradering, String skjerming, String mappe, String registrering, String saksmappe, String journalpost, Integer saksaar, Long sakssekvensnummer, DataException saksdato, String administrativEnhet, String saksansvarlig, String journalenhet, String saksstatus, Date utlaantDato, String utlaantTil, String referanseSekundaerKassifikasjon, String sakspart, String presidens) {
         super(registreringer, systemID, tittel, offentligTittel, beskrivelse, noekkelord, dokumentmedium, oppbevaringssted, opprettetDato, opprettetAv, avsluttetDato, avsluttetAv, referanseArkivdel, virksomhetsspesifikkeMetadata, kryssreferanse, merknad, kassasjon, gradering, skjerming, mappe, registrering, saksmappe, journalpost);
         this.saksaar = saksaar;
         this.sakssekvensnummer = sakssekvensnummer;
