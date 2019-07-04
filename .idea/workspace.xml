@@ -1,7 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b85c987-0602-4c7c-af96-ffa87086843e" name="Default Changelist" comment="" />
+    <list default="true" id="4b85c987-0602-4c7c-af96-ffa87086843e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/Controllers/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/Parsing/iterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/Parsing/parser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Dokumentbeskrivelse/Dokumentbeskrivelse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Dokumentbeskrivelse/DokumentbeskrivelseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Dokumentbeskrivelse/DokumentbeskrivelseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Dokumentbeskrivelse/DokumentbeskrivelseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Dokumentobjekt/Dokumentobjekt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Dokumentobjekt/DokumentobjektController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Dokumentobjekt/DokumentobjektRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Dokumentobjekt/DokumentobjektService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Journalpost/Journalpost.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Journalpost/JournalpostController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Journalpost/JournalpostRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Journalpost/JournalpostService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Korrespondansepart/Korrespondansepart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Korrespondansepart/KorrespondansepartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Korrespondansepart/KorrespondansepartRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Korrespondansepart/KorrespondansepartService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Mappe/Mappe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Mappe/MappeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Mappe/MappeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Mappe/MappeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Registrering/Registrering.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Registrering/RegistreringController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Registrering/RegistreringRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Registrering/RegistreringService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Saksmappe/Saksmappe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Saksmappe/SaksmappeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Saksmappe/SaksmappeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Saksmappe/SaksmappeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Skjerming/Skjerming.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Skjerming/SkjermingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Skjerming/SkjermingRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Skjerming/SkjermingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RDFtoJava/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RDFtoJava/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,19 +50,60 @@
     <option name="testRunner" value="GRADLE" />
     <option name="delegatedBuild" value="true" />
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/e-innsynv2/src/main/java/com/dc19einnsyn/einnsynv2/packages/Journalpost/Journalpost.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" selection-start-line="2" selection-end-line="222" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/e-innsynv2/src/main/java/com/dc19einnsyn/einnsynv2/packages/Saksmappe/Saksmappe.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/e-innsynv2/src/main/java/com/dc19einnsyn/einnsynv2/EInnsynv2Application.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/e-innsynv2/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1360">
+              <caret line="125" column="19" selection-start-line="23" selection-start-column="4" selection-end-line="125" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/e-innsynv2/src/main/java/com/dc19einnsyn/einnsynv2/packages/Mappe/Mappe.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/dc19-eInnsyn.iml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
-        <option value="$PROJECT_DIR$/RDFtoJava/.idea/RDFtoJava.iml" />
-      </list>
-    </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="953" />
@@ -36,8 +115,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -48,34 +125,25 @@
             <path>
               <item name="dc19-eInnsyn" type="b2602c69:ProjectViewProjectNode" />
               <item name="dc19-eInnsyn" type="462c0819:PsiDirectoryNode" />
-              <item name="RDFtoJava" type="462c0819:PsiDirectoryNode" />
+              <item name="e-innsynv2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dc19-eInnsyn" type="b2602c69:ProjectViewProjectNode" />
               <item name="dc19-eInnsyn" type="462c0819:PsiDirectoryNode" />
-              <item name="RDFtoJava" type="462c0819:PsiDirectoryNode" />
-              <item name="ParsingTest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dc19-eInnsyn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dc19-eInnsyn" type="462c0819:PsiDirectoryNode" />
-              <item name="RDFtoJava" type="462c0819:PsiDirectoryNode" />
-              <item name="ParsingTest" type="462c0819:PsiDirectoryNode" />
+              <item name="e-innsynv2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dc19-eInnsyn" type="b2602c69:ProjectViewProjectNode" />
               <item name="dc19-eInnsyn" type="462c0819:PsiDirectoryNode" />
-              <item name="RDFtoJava" type="462c0819:PsiDirectoryNode" />
-              <item name="ParsingTest" type="462c0819:PsiDirectoryNode" />
+              <item name="e-innsynv2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dc19-eInnsyn" type="b2602c69:ProjectViewProjectNode" />
               <item name="dc19-eInnsyn" type="462c0819:PsiDirectoryNode" />
-              <item name="RDFtoJava" type="462c0819:PsiDirectoryNode" />
-              <item name="ParsingTest" type="462c0819:PsiDirectoryNode" />
+              <item name="e-innsynv2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -83,8 +151,7 @@
             <path>
               <item name="dc19-eInnsyn" type="b2602c69:ProjectViewProjectNode" />
               <item name="dc19-eInnsyn" type="462c0819:PsiDirectoryNode" />
-              <item name="RDFtoJava" type="462c0819:PsiDirectoryNode" />
-              <item name="ParsingTest" type="462c0819:PsiDirectoryNode" />
+              <item name="e-innsynv2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -93,33 +160,76 @@
             <path>
               <item name="dc19-eInnsyn" type="b2602c69:ProjectViewProjectNode" />
               <item name="dc19-eInnsyn" type="462c0819:PsiDirectoryNode" />
-              <item name="RDFtoJava" type="462c0819:PsiDirectoryNode" />
-              <item name="ParsingTest" type="462c0819:PsiDirectoryNode" />
+              <item name="e-innsynv2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="thomas" type="462c0819:PsiDirectoryNode" />
+              <item name="dc19einnsyn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dc19-eInnsyn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dc19-eInnsyn" type="462c0819:PsiDirectoryNode" />
+              <item name="e-innsynv2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="dc19einnsyn" type="462c0819:PsiDirectoryNode" />
+              <item name="einnsynv2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dc19-eInnsyn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dc19-eInnsyn" type="462c0819:PsiDirectoryNode" />
+              <item name="e-innsynv2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="dc19einnsyn" type="462c0819:PsiDirectoryNode" />
+              <item name="einnsynv2" type="462c0819:PsiDirectoryNode" />
+              <item name="packages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dc19-eInnsyn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dc19-eInnsyn" type="462c0819:PsiDirectoryNode" />
+              <item name="e-innsynv2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="dc19einnsyn" type="462c0819:PsiDirectoryNode" />
+              <item name="einnsynv2" type="462c0819:PsiDirectoryNode" />
+              <item name="packages" type="462c0819:PsiDirectoryNode" />
+              <item name="Mappe" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dc19-eInnsyn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dc19-eInnsyn" type="462c0819:PsiDirectoryNode" />
+              <item name="e-innsynv2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="dc19einnsyn" type="462c0819:PsiDirectoryNode" />
+              <item name="einnsynv2" type="462c0819:PsiDirectoryNode" />
+              <item name="Parsing" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dc19-eInnsyn" type="b2602c69:ProjectViewProjectNode" />
               <item name="dc19-eInnsyn" type="462c0819:PsiDirectoryNode" />
               <item name="RDFtoJava" type="462c0819:PsiDirectoryNode" />
-              <item name="ParsingTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="thomas" type="462c0819:PsiDirectoryNode" />
-              <item name="parsingtest" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -148,28 +258,24 @@
       <option name="presentableId" value="Default" />
       <updated>1561975513399</updated>
       <workItem from="1561975524292" duration="119000" />
+      <workItem from="1562234100958" duration="1170000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119000" />
+    <option name="totallyTimeSpent" value="1289000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="953" y="0" width="974" height="1167" extended-state="0" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Learn" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24945295" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.46936542" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Learn" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -177,18 +283,63 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/e-innsynv2/src/main/java/com/dc19einnsyn/einnsynv2/packages/Journalpost/Journalpost.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="222" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-innsynv2/src/main/java/com/dc19einnsyn/einnsynv2/packages/Saksmappe/Saksmappe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-innsynv2/src/main/java/com/dc19einnsyn/einnsynv2/EInnsynv2Application.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-innsynv2/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1360">
+          <caret line="125" column="19" selection-start-line="23" selection-start-column="4" selection-end-line="125" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-innsynv2/src/main/java/com/dc19einnsyn/einnsynv2/packages/Mappe/Mappe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
