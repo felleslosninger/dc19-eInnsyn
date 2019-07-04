@@ -35,6 +35,7 @@
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>
         </dependency>
+        <!--
         <dependency>
             <groupId>com.sun.xml.bind</groupId>
             <artifactId>jaxb-core</artifactId>
@@ -43,9 +44,17 @@
             <groupId>com.sun.xml.bind</groupId>
             <artifactId>jaxb-impl</artifactId>
         </dependency>
+        -->
         <dependency>
             <groupId>javax.activation</groupId>
             <artifactId>activation</artifactId>
+        </dependency>
+
+        <!--        JENA        -->
+        <dependency>
+            <groupId>org.apache.jena</groupId>
+            <artifactId>apache-jena-libs</artifactId>
+            <type>pom</type>
         </dependency>
         <!--        RDF4J       -->
         <dependency>
