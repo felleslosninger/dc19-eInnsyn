@@ -6,6 +6,7 @@ import org.eclipse.rdf4j.rio.RDFFormat;
 import org.eclipse.rdf4j.rio.Rio;
 import com.complexible.pinto.RDFMapper;
 import org.eclipse.rdf4j.rio.RDFParser;
+import org.openrdf.rio.turtle.TurtleWriter;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -21,33 +22,31 @@ public class Iteratorv2 {
         String baseURI = in.toString();
         Model model = Rio.parse(in, "", RDFFormat.TURTLE);
 
+        Model fornow = Rio.parse(new FileInputStream("C:\\Users\\camp-rgu\\Documents\\Dumpfil\\empty.ttl"), baseURI, RDFFormat.TURTLE);
+        List<Model> listet = new ArrayList<Model>();
+        String subj = "";
 
-        System.out.println(model.toArray()[1].toString());
-        List<Statement> fornow = new ArrayList<Statement>();
-        List<List<Statement>> listet = new ArrayList<List<Statement>>();
 
 
         for (Statement st : model) {
-            if (fornow.isEmpty()){
+            if (subj.equals("")){
                 fornow.add(st);
-            }else if (st.getSubject().stringValue().equals(fornow.get(0).getSubject().stringValue())){
+                subj = st.getSubject().stringValue();
+            }else if (st.getSubject().stringValue().equals(subj)){
                 fornow.add(st);
             }else {
-                System.out.println("Inne 3 ny");
-                System.out.println("fornow før listet: " + fornow.toString());
-                System.out.println("LISTET før FORNOW: " + listet.toString());
                 listet.add(fornow);
-                System.out.println("LISTET: " + listet.toString());
-                fornow = new ArrayList<Statement>();
-                System.out.println("fornow ETTER listet: " + fornow.toString());
+                fornow = Rio.parse(new FileInputStream("C:\\Users\\camp-rgu\\Documents\\Dumpfil\\empty.ttl"), baseURI, RDFFormat.TURTLE);
                 fornow.add(st);
+                subj = st.getSubject().stringValue();
             }
         }
         System.out.println("----------------------");
         System.out.println(listet.toString());
         System.out.println("----------------------");
 
-        for (List<Statement> lis : listet){
+        for (Model lis : listet){
+            System.out.println("");
             for (Statement stat : lis){
                 System.out.println("Her er objektet: " + stat.getObject().stringValue());
             }
@@ -72,5 +71,19 @@ public class Iteratorv2 {
 //            } else {
 //
 //            }
+    }
+
+    private void marshalPintoToTurtle() {
+
+        Journalpost journalpost = new Journalpost();
+
+        final Journalpost journalpost1 = RDFMapper.create().readValue(model, Journalpost.class);
+
+        TurtleWriter tw = new TurtleWriter(System.out);
+
+        tw.startRDF();
+        model.getNamespaces().stream().forEach(ns -> tw.handleNamespace(ns.getPrefix(), ns.getName()));
+        model.stream().forEach(tw::handleStatement);
+        tw.endRDF();
     }
 }
