@@ -12,6 +12,11 @@ public class EInnsynv2Application {
         SpringApplication.run(EInnsynv2Application.class, args);
     }
 
+
+
+
+    //public Mappe minMappe = new Mappe();
+
   //  @Autowired
   //  SkjermingRepository skjermingRepository;
 
