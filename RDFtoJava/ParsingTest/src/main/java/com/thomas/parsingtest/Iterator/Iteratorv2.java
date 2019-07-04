@@ -17,10 +17,9 @@ public class Iteratorv2 {
 
     public static void iteratorv2() throws IOException {
 
-        Boolean alreadyStated = false;
         InputStream in = new FileInputStream(new File("C:\\Users\\camp-rgu\\Documents\\Dumpfil\\utdrag.ttl"));
         String baseURI = in.toString();
-        Model model = Rio.parse(in, baseURI, RDFFormat.TURTLE);
+        Model model = Rio.parse(in, "", RDFFormat.TURTLE);
 
 
         System.out.println(model.toArray()[1].toString());
@@ -39,7 +38,7 @@ public class Iteratorv2 {
                 System.out.println("LISTET før FORNOW: " + listet.toString());
                 listet.add(fornow);
                 System.out.println("LISTET: " + listet.toString());
-                fornow.clear();
+                fornow = new ArrayList<Statement>();
                 System.out.println("fornow ETTER listet: " + fornow.toString());
                 fornow.add(st);
             }
