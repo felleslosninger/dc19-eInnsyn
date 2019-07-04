@@ -1,16 +1,19 @@
 package com.dc19einnsyn.einnsynv2.packages.Korrespondansepart;
 
+import com.dc19einnsyn.einnsynv2.packages.Registrering.Registrering;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Data
 @NoArgsConstructor
 public class Korrespondansepart {
+
+    @ManyToOne
+    @JoinColumn(name = "registrerings_id")
+    private Registrering registrering;
 
     @Id
     @GeneratedValue

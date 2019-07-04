@@ -1,21 +1,48 @@
 package com.dc19einnsyn.einnsynv2.packages.Registrering;
 
+import com.dc19einnsyn.einnsynv2.packages.Dokumentbeskrivelse.Dokumentbeskrivelse;
+import com.dc19einnsyn.einnsynv2.packages.Korrespondansepart.Korrespondansepart;
+import com.dc19einnsyn.einnsynv2.packages.Mappe.Mappe;
+import com.dc19einnsyn.einnsynv2.packages.Skjerming.Skjerming;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Data
 @NoArgsConstructor
-
+@Table
 public class Registrering {
+
+    @ManyToOne
+    @JoinColumn(name = "mappe_id")
+    private Mappe mappe;
+
+    @OneToOne(mappedBy = "registrering",
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY,
+            optional = false
+    )
+    private Skjerming skjerming;
+
+    @OneToMany(
+            mappedBy = "registrering",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    private Set<Dokumentbeskrivelse> dokumentbeskrivelser;
+
+    @OneToMany(
+            mappedBy = "registrering",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    private Set<Korrespondansepart> korrespondanseparter;
 
     @Id
     private Long registreringsID;
-
-
     private String systemID;
     private String opprettetDato;
     private String opprettetAv;
@@ -24,7 +51,7 @@ public class Registrering {
     private String referanseArkivdel;
 
     private String kassasjon;
-    private String skjerming;
+    //private String skjerming;
     private String gradering;
 
     private String dokumentbeskrivelse;
@@ -54,7 +81,7 @@ public class Registrering {
         this.arkivertAv = arkivertAv;
         this.referanseArkivdel = referanseArkivdel;
         this.kassasjon = kassasjon;
-        this.skjerming = skjerming;
+        //this.skjerming = skjerming;
         this.gradering = gradering;
         this.dokumentbeskrivelse = dokumentbeskrivelse;
         this.dokumentobjekt = dokumentobjekt;
@@ -135,14 +162,14 @@ public class Registrering {
         this.kassasjon = kassasjon;
     }
 
-    public String getSkjerming() {
+    /*public String getSkjerming() {
         return skjerming;
     }
 
     public void setSkjerming(String skjerming) {
         this.skjerming = skjerming;
     }
-
+*/
     public String getGradering() {
         return gradering;
     }

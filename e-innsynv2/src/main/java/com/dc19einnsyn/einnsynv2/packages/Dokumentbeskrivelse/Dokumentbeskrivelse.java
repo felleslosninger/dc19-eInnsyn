@@ -1,16 +1,30 @@
 package com.dc19einnsyn.einnsynv2.packages.Dokumentbeskrivelse;
 
+import com.dc19einnsyn.einnsynv2.packages.Dokumentobjekt.Dokumentobjekt;
+import com.dc19einnsyn.einnsynv2.packages.Mappe.Mappe;
+import com.dc19einnsyn.einnsynv2.packages.Registrering.Registrering;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 @NoArgsConstructor
 public class Dokumentbeskrivelse {
 
+    @ManyToOne
+    @JoinColumn(name = "registrerings_id")
+    private Registrering registrering;
+
+    @OneToMany(
+            mappedBy = "dokumentbeskrivelse",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    private Set<Dokumentobjekt> dokumentobjekt;
+    //@Id
+   // private Long registreringsID;
 
 
     //@GeneratedValue after db connect
@@ -41,7 +55,7 @@ public class Dokumentbeskrivelse {
     private String skjerming; // Class
     private String gradering; // Class but not in simplified format.
     private String elektroniskSignatur;
-    private String dokumentobjekt; // Class
+    //private String dokumentobjekt; // Class
 
 
     public Dokumentbeskrivelse(String systemID, String dokumentType, String dokumentStatus, String tittel, String beskrivelse, String forfatter, String opprettetDato, String opprettetAv, String dokumentMedium, String oppbevaringssted, String referanseArkivedel, String tilknyttetRegistreringSom, Long dokumentNummer, Date tilknyttetDato, String tilknyttetAv, String merknad, String kassasjon, String utfoertKassasjon, String sletting, String skjerming, String gradering, String elektroniskSignatur, String dokumentobjekt) {
@@ -67,7 +81,7 @@ public class Dokumentbeskrivelse {
         this.skjerming = skjerming;
         this.gradering = gradering;
         this.elektroniskSignatur = elektroniskSignatur;
-        this.dokumentobjekt = dokumentobjekt;
+        //this.dokumentobjekt = dokumentobjekt;
     }
 
     public Long getDokumentBeskrivelseId() {
@@ -254,11 +268,11 @@ public class Dokumentbeskrivelse {
         this.elektroniskSignatur = elektroniskSignatur;
     }
 
-    public String getDokumentobjekt() {
+    /*public String getDokumentobjekt() {
         return dokumentobjekt;
-    }
+    }*/
 
-    public void setDokumentobjekt(String dokumentobjekt) {
+   /* public void setDokumentobjekt(String dokumentobjekt) {
         this.dokumentobjekt = dokumentobjekt;
-    }
+    }*/
 }

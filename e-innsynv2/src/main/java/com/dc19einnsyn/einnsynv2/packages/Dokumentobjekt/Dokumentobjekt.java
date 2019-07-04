@@ -1,17 +1,21 @@
 package com.dc19einnsyn.einnsynv2.packages.Dokumentobjekt;
 
+import com.dc19einnsyn.einnsynv2.packages.Dokumentbeskrivelse.Dokumentbeskrivelse;
+import com.dc19einnsyn.einnsynv2.packages.Registrering.Registrering;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 @Data
 @NoArgsConstructor
 public class Dokumentobjekt {
+
+    @ManyToOne
+    @JoinColumn(name = "dokumentbeskrivelse_id")
+    private Dokumentbeskrivelse dokumentbeskrivelse;
 
     @Id
     @GeneratedValue

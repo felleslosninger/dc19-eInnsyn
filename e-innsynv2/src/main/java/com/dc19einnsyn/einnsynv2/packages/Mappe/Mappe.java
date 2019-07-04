@@ -1,15 +1,23 @@
 package com.dc19einnsyn.einnsynv2.packages.Mappe;
 
 
+import com.dc19einnsyn.einnsynv2.packages.Registrering.Registrering;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @NoArgsConstructor
+@Table
 public class Mappe {
+
+    @OneToMany(
+            mappedBy = "mappe",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    private Set<Registrering> registreringer;
 
     @Id
     @GeneratedValue
