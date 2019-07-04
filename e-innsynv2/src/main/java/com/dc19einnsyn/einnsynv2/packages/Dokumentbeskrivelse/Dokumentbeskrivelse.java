@@ -1,7 +1,6 @@
 package com.dc19einnsyn.einnsynv2.packages.Dokumentbeskrivelse;
 
 import com.dc19einnsyn.einnsynv2.packages.Dokumentobjekt.Dokumentobjekt;
-import com.dc19einnsyn.einnsynv2.packages.Mappe.Mappe;
 import com.dc19einnsyn.einnsynv2.packages.Registrering.Registrering;
 import lombok.NoArgsConstructor;
 
@@ -19,15 +18,11 @@ public class Dokumentbeskrivelse {
 
     @OneToMany(
             mappedBy = "dokumentbeskrivelse",
-            cascade = CascadeType.ALL,
-            orphanRemoval = true
+            cascade = CascadeType.ALL, //foreløbig uvist hva denne gjør
+            orphanRemoval = true // foreløpig uvist hva denne gjør
     )
     private Set<Dokumentobjekt> dokumentobjekt;
-    //@Id
-   // private Long registreringsID;
 
-
-    //@GeneratedValue after db connect
     @Id
     @GeneratedValue
     private Long dokumentBeskrivelseId;
@@ -38,7 +33,7 @@ public class Dokumentbeskrivelse {
     private String tittel;
     private String beskrivelse;
     private String forfatter;
-    private String opprettetDato;
+    private Date opprettetDato;
     private String opprettetAv;
     private String dokumentMedium;
     private String oppbevaringssted;
@@ -55,10 +50,10 @@ public class Dokumentbeskrivelse {
     private String skjerming; // Class
     private String gradering; // Class but not in simplified format.
     private String elektroniskSignatur;
-    //private String dokumentobjekt; // Class
 
-
-    public Dokumentbeskrivelse(String systemID, String dokumentType, String dokumentStatus, String tittel, String beskrivelse, String forfatter, String opprettetDato, String opprettetAv, String dokumentMedium, String oppbevaringssted, String referanseArkivedel, String tilknyttetRegistreringSom, Long dokumentNummer, Date tilknyttetDato, String tilknyttetAv, String merknad, String kassasjon, String utfoertKassasjon, String sletting, String skjerming, String gradering, String elektroniskSignatur, String dokumentobjekt) {
+    public Dokumentbeskrivelse(Registrering registrering, Set<Dokumentobjekt> dokumentobjekt, String systemID, String dokumentType, String dokumentStatus, String tittel, String beskrivelse, String forfatter, Date opprettetDato, String opprettetAv, String dokumentMedium, String oppbevaringssted, String referanseArkivedel, String tilknyttetRegistreringSom, Long dokumentNummer, Date tilknyttetDato, String tilknyttetAv, String merknad, String kassasjon, String utfoertKassasjon, String sletting, String skjerming, String gradering, String elektroniskSignatur) {
+        this.registrering = registrering;
+        this.dokumentobjekt = dokumentobjekt;
         this.systemID = systemID;
         this.dokumentType = dokumentType;
         this.dokumentStatus = dokumentStatus;
@@ -81,7 +76,22 @@ public class Dokumentbeskrivelse {
         this.skjerming = skjerming;
         this.gradering = gradering;
         this.elektroniskSignatur = elektroniskSignatur;
-        //this.dokumentobjekt = dokumentobjekt;
+    }
+
+    public Registrering getRegistrering() {
+        return registrering;
+    }
+
+    public void setRegistrering(Registrering registrering) {
+        this.registrering = registrering;
+    }
+
+    public Set<Dokumentobjekt> getDokumentobjekt() {
+        return dokumentobjekt;
+    }
+
+    public void setDokumentobjekt(Set<Dokumentobjekt> dokumentobjekt) {
+        this.dokumentobjekt = dokumentobjekt;
     }
 
     public Long getDokumentBeskrivelseId() {
@@ -140,11 +150,11 @@ public class Dokumentbeskrivelse {
         this.forfatter = forfatter;
     }
 
-    public String getOpprettetDato() {
+    public Date getOpprettetDato() {
         return opprettetDato;
     }
 
-    public void setOpprettetDato(String opprettetDato) {
+    public void setOpprettetDato(Date opprettetDato) {
         this.opprettetDato = opprettetDato;
     }
 
@@ -267,12 +277,4 @@ public class Dokumentbeskrivelse {
     public void setElektroniskSignatur(String elektroniskSignatur) {
         this.elektroniskSignatur = elektroniskSignatur;
     }
-
-    /*public String getDokumentobjekt() {
-        return dokumentobjekt;
-    }*/
-
-   /* public void setDokumentobjekt(String dokumentobjekt) {
-        this.dokumentobjekt = dokumentobjekt;
-    }*/
 }

@@ -1,15 +1,12 @@
 package com.dc19einnsyn.einnsynv2.packages.Dokumentobjekt;
 
 import com.dc19einnsyn.einnsynv2.packages.Dokumentbeskrivelse.Dokumentbeskrivelse;
-import com.dc19einnsyn.einnsynv2.packages.Registrering.Registrering;
-import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Data
 @NoArgsConstructor
 public class Dokumentobjekt {
 
@@ -34,7 +31,8 @@ public class Dokumentobjekt {
     private String elektroniskSignatur;
     private String konvertering;
 
-    public Dokumentobjekt(Long versjonsnummer, String variantformat, String format, String formatDetaljer, Date oprettetDato, String opprettetAv, String referanseDokumentfil, String sjekksum, String sjekksumAlgoritme, String filstoerrelse, String elektroniskSignatur, String konvertering) {
+    public Dokumentobjekt(Dokumentbeskrivelse dokumentbeskrivelse, Long versjonsnummer, String variantformat, String format, String formatDetaljer, Date oprettetDato, String opprettetAv, String referanseDokumentfil, String sjekksum, String sjekksumAlgoritme, String filstoerrelse, String elektroniskSignatur, String konvertering) {
+        this.dokumentbeskrivelse = dokumentbeskrivelse;
         this.versjonsnummer = versjonsnummer;
         this.variantformat = variantformat;
         this.format = format;
@@ -47,6 +45,14 @@ public class Dokumentobjekt {
         this.filstoerrelse = filstoerrelse;
         this.elektroniskSignatur = elektroniskSignatur;
         this.konvertering = konvertering;
+    }
+
+    public Dokumentbeskrivelse getDokumentbeskrivelse() {
+        return dokumentbeskrivelse;
+    }
+
+    public void setDokumentbeskrivelse(Dokumentbeskrivelse dokumentbeskrivelse) {
+        this.dokumentbeskrivelse = dokumentbeskrivelse;
     }
 
     public Long getDokumentObjektId() {
@@ -153,21 +159,3 @@ public class Dokumentobjekt {
         this.konvertering = konvertering;
     }
 }
-/*
-<xs:sequence>
-
-    <xs:element name="versjonsnummer" type="n5mdk:versjonsnummer"/>
-    <xs:element name="variantformat" type="n5mdk:variantformat"/>
-    <xs:element name="format" type="n5mdk:format"/>
-    <xs:element name="formatDetaljer" type="n5mdk:formatDetaljer" minOccurs="0"/>
-    <xs:element name="opprettetDato" type="n5mdk:opprettetDato"/>
-    <xs:element name="opprettetAv" type="n5mdk:opprettetAv"/>
-    <xs:element name="referanseDokumentfil" type="n5mdk:referanseDokumentfil"/>
-    <xs:element name="sjekksum" type="n5mdk:sjekksum"/>
-    <xs:element name="sjekksumAlgoritme" type="n5mdk:sjekksumAlgoritme"/>
-    <xs:element name="filstoerrelse" type="n5mdk:filstoerrelse"/>
-    <xs:element name="elektroniskSignatur" type="elektroniskSignatur" minOccurs="0"/>
-
-    <xs:element name="konvertering" type="konvertering" minOccurs="0" maxOccurs="unbounded"/>
-</xs:sequence>
- */
