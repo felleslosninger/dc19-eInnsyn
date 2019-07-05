@@ -1,10 +1,10 @@
 package com.einnsyn.cosmodb.packages.Journalpost;
 
-import com.dc19einnsyn.einnsynv2.packages.Dokumentbeskrivelse.Dokumentbeskrivelse;
-import com.dc19einnsyn.einnsynv2.packages.Korrespondansepart.Korrespondansepart;
-import com.dc19einnsyn.einnsynv2.packages.Mappe.Mappe;
-import com.dc19einnsyn.einnsynv2.packages.Registrering.Registrering;
-import com.dc19einnsyn.einnsynv2.packages.Skjerming.Skjerming;
+import com.einnsyn.cosmodb.packages.Dokumentbeskrivelse.Dokumentbeskrivelse;
+import com.einnsyn.cosmodb.packages.Korrespondansepart.Korrespondansepart;
+import com.einnsyn.cosmodb.packages.Mappe.Mappe;
+import com.einnsyn.cosmodb.packages.Registrering.Registrering;
+import com.einnsyn.cosmodb.packages.Skjerming.Skjerming;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;

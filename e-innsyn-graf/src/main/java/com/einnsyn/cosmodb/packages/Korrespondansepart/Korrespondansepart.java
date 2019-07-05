@@ -1,6 +1,6 @@
 package com.einnsyn.cosmodb.packages.Korrespondansepart;
 
-import com.dc19einnsyn.einnsynv2.packages.Registrering.Registrering;
+import com.einnsyn.cosmodb.packages.Registrering.Registrering;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
