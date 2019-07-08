@@ -1,16 +1,19 @@
 package com.einnsyn.cosmodb.packages.Korrespondansepart;
 
 import com.einnsyn.cosmodb.packages.Registrering.Registrering;
+import com.microsoft.spring.data.gremlin.annotation.Vertex;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-@Entity
+@Vertex
 @NoArgsConstructor
 public class Korrespondansepart {
 
+    /*
     @ManyToOne
     @JoinColumn(name = "registrerings_id")
+     */
     private Registrering registrering;
 
     @Id
