@@ -1,5 +1,4 @@
 package com.einnsyn.cosmodb.packages.Korrespondansepart;
-
 import com.einnsyn.cosmodb.packages.Registrering.Registrering;
 import com.microsoft.spring.data.gremlin.annotation.Vertex;
 import lombok.NoArgsConstructor;

@@ -8,8 +8,8 @@ import com.dc19einnsyn.einnsynv2.packages.Skjerming.Skjerming;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
+import java.util.ArrayList;
 import java.util.Date;
-import java.util.Set;
 
 @Entity
 @NoArgsConstructor
@@ -37,7 +37,7 @@ public class Journalpost extends Registrering {
     private String elektroniskSignatur;
     private String foelgsakenreferanse;
 
-    public Journalpost(Mappe mappe, Skjerming skjerming, Set<Dokumentbeskrivelse> dokumentbeskrivelser, Set<Korrespondansepart> korrespondanseparter, Long registreringsID, String systemID, String opprettetDato, String opprettetAv, String arkivertDato, String arkivertAv, String referanseArkivdel, String kassasjon, String gradering, String dokumentbeskrivelse, String dokumentobjekt, String korrespondansepart, String tittel, String offentligTittel, String beskrivelse, String noekkelord, String forfatter, String dokumentmedium, String oppbevaringssted, String virksomhetsspesifikkeMetadata, String merknad, String kryssreferanse, Integer journalaar, Long journalsekvensnummer, Integer journalpostnummer, String journalposttype, String journalstatus, Date journaldato, Date dokumentetsDato, Date mottattDato, Date sendtDato, Date forfallsdato, Date offentlighetsvurdertDato, Integer antallVedlegg, Date utlaantDato, String utlaantTil, String journalenhet, String avskrivning, String dokumentflyt, String presedens, String elektroniskSignatur, String foelgsakenreferanse) {
+    public Journalpost(Mappe mappe, Skjerming skjerming, ArrayList<Dokumentbeskrivelse> dokumentbeskrivelser, ArrayList<Korrespondansepart> korrespondanseparter, Long registreringsID, String systemID, String opprettetDato, String opprettetAv, String arkivertDato, String arkivertAv, String referanseArkivdel, String kassasjon, String gradering, String dokumentbeskrivelse, String dokumentobjekt, String korrespondansepart, String tittel, String offentligTittel, String beskrivelse, String noekkelord, String forfatter, String dokumentmedium, String oppbevaringssted, String virksomhetsspesifikkeMetadata, String merknad, String kryssreferanse, Integer journalaar, Long journalsekvensnummer, Integer journalpostnummer, String journalposttype, String journalstatus, Date journaldato, Date dokumentetsDato, Date mottattDato, Date sendtDato, Date forfallsdato, Date offentlighetsvurdertDato, Integer antallVedlegg, Date utlaantDato, String utlaantTil, String journalenhet, String avskrivning, String dokumentflyt, String presedens, String elektroniskSignatur, String foelgsakenreferanse) {
         super(mappe, skjerming, dokumentbeskrivelser, korrespondanseparter, registreringsID, systemID, opprettetDato, opprettetAv, arkivertDato, arkivertAv, referanseArkivdel, kassasjon, gradering, dokumentbeskrivelse, dokumentobjekt, korrespondansepart, tittel, offentligTittel, beskrivelse, noekkelord, forfatter, dokumentmedium, oppbevaringssted, virksomhetsspesifikkeMetadata, merknad, kryssreferanse);
         this.journalaar = journalaar;
         this.journalsekvensnummer = journalsekvensnummer;

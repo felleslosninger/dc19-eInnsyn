@@ -1,5 +1,4 @@
 package com.einnsyn.cosmodb.packages.Dokumentobjekt;
-
 import com.einnsyn.cosmodb.packages.Dokumentbeskrivelse.Dokumentbeskrivelse;
 import com.microsoft.spring.data.gremlin.annotation.Vertex;
 import lombok.NoArgsConstructor;

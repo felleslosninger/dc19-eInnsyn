@@ -1,6 +1,6 @@
-package com.thomas.pintothehorse;
+package com.thomas.parsingtest.Pinto;
 
-import com.complexible.common.graph.Graph;
+//import com.complexible.common.graph.Graph;
 import com.complexible.pinto.RDFMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.openrdf.model.Model;
@@ -12,7 +12,7 @@ import org.springframework.core.io.Resource;
 import java.io.IOException;
 
 @Slf4j
-public class test {
+public class EitForsok {
 
     private static String file_location = "C:\\Users\\camp-tvy\\Documents\\ProsjektTest\\Data\\kortfil.ttl";
 
@@ -24,9 +24,9 @@ public class test {
 
         //Model graph = RDFMapper.create().writeValue(new Journalpost());
 
-        Journalpost journalpost = RDFMapper.create().readValue(model, Journalpost.class);
+        //Journalpost journalpost = RDFMapper.create().readValue(model, Journalpost.class);
         //graph.toString();
-        journalpost.toString();
+        //journalpost.toString();
     }
 
 }

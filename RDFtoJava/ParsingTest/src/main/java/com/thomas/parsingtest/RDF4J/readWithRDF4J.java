@@ -1,6 +1,6 @@
-package com.thomas.pintothehorse;
+package com.thomas.parsingtest.RDF4J;
 
-import com.complexible.common.graph.Graph;
+//import com.complexible.common.graph.Graph;
 import com.complexible.pinto.RDFMapper;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Statement;
@@ -11,6 +11,7 @@ import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
 
 import java.io.IOException;
+
 
 public class readWithRDF4J {
 
