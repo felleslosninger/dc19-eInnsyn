@@ -1,17 +1,19 @@
 package com.einnsyn.cosmodb.packages.Dokumentbeskrivelse;
 
-import com.dc19einnsyn.einnsynv2.packages.Dokumentobjekt.Dokumentobjekt;
-import com.dc19einnsyn.einnsynv2.packages.Registrering.Registrering;
+import com.einnsyn.cosmodb.packages.Dokumentobjekt.Dokumentobjekt;
+import com.einnsyn.cosmodb.packages.Registrering.Registrering;
+import com.microsoft.spring.data.gremlin.annotation.Vertex;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Date;
 import java.util.Set;
 
-@Entity
+@Vertex
 @NoArgsConstructor
 public class Dokumentbeskrivelse {
 
+    /*
     @ManyToOne
     @JoinColumn(name = "registrerings_id")
     private Registrering registrering;
@@ -21,6 +23,7 @@ public class Dokumentbeskrivelse {
             cascade = CascadeType.ALL, //foreløbig uvist hva denne gjør
             orphanRemoval = true // foreløpig uvist hva denne gjør
     )
+    */
     private Set<Dokumentobjekt> dokumentobjekt;
 
     @Id
@@ -52,7 +55,7 @@ public class Dokumentbeskrivelse {
     private String elektroniskSignatur;
 
     public Dokumentbeskrivelse(Registrering registrering, Set<Dokumentobjekt> dokumentobjekt, String systemID, String dokumentType, String dokumentStatus, String tittel, String beskrivelse, String forfatter, Date opprettetDato, String opprettetAv, String dokumentMedium, String oppbevaringssted, String referanseArkivedel, String tilknyttetRegistreringSom, Long dokumentNummer, Date tilknyttetDato, String tilknyttetAv, String merknad, String kassasjon, String utfoertKassasjon, String sletting, String skjerming, String gradering, String elektroniskSignatur) {
-        this.registrering = registrering;
+        //this.registrering = registrering;
         this.dokumentobjekt = dokumentobjekt;
         this.systemID = systemID;
         this.dokumentType = dokumentType;
@@ -78,6 +81,7 @@ public class Dokumentbeskrivelse {
         this.elektroniskSignatur = elektroniskSignatur;
     }
 
+    /*
     public Registrering getRegistrering() {
         return registrering;
     }
@@ -85,6 +89,8 @@ public class Dokumentbeskrivelse {
     public void setRegistrering(Registrering registrering) {
         this.registrering = registrering;
     }
+
+     */
 
     public Set<Dokumentobjekt> getDokumentobjekt() {
         return dokumentobjekt;

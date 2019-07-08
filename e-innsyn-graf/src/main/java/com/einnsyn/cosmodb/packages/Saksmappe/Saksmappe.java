@@ -1,15 +1,16 @@
 package com.einnsyn.cosmodb.packages.Saksmappe;
 
-import com.dc19einnsyn.einnsynv2.packages.Mappe.Mappe;
+import com.einnsyn.cosmodb.packages.Mappe.Mappe;
+import com.microsoft.spring.data.gremlin.annotation.Vertex;
 import lombok.NoArgsConstructor;
 import org.hibernate.exception.DataException;
-import com.dc19einnsyn.einnsynv2.packages.Registrering.Registrering;
+import com.einnsyn.cosmodb.packages.Registrering.Registrering;
 
 import javax.persistence.Entity;
 import java.util.Date;
 import java.util.Set;
 
-@Entity
+@Vertex
 @NoArgsConstructor
 public class Saksmappe extends Mappe {
 

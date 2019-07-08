@@ -1,18 +1,22 @@
 package com.einnsyn.cosmodb.packages.Dokumentobjekt;
-
-import com.dc19einnsyn.einnsynv2.packages.Dokumentbeskrivelse.Dokumentbeskrivelse;
+import com.einnsyn.cosmodb.packages.Dokumentbeskrivelse.Dokumentbeskrivelse;
+import com.microsoft.spring.data.gremlin.annotation.Vertex;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Date;
 
-@Entity
+@Vertex
 @NoArgsConstructor
 public class Dokumentobjekt {
 
+    /*
     @ManyToOne
     @JoinColumn(name = "dokumentbeskrivelse_id")
+     */
+
     private Dokumentbeskrivelse dokumentbeskrivelse;
+
 
     @Id
     @GeneratedValue
