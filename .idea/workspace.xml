@@ -2,43 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b85c987-0602-4c7c-af96-ffa87086843e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/Controllers/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/Parsing/iterator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/Parsing/parser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Dokumentbeskrivelse/Dokumentbeskrivelse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Dokumentbeskrivelse/DokumentbeskrivelseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Dokumentbeskrivelse/DokumentbeskrivelseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Dokumentbeskrivelse/DokumentbeskrivelseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Dokumentobjekt/Dokumentobjekt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Dokumentobjekt/DokumentobjektController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Dokumentobjekt/DokumentobjektRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Dokumentobjekt/DokumentobjektService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Journalpost/Journalpost.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Journalpost/JournalpostController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Journalpost/JournalpostRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Journalpost/JournalpostService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Korrespondansepart/Korrespondansepart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Korrespondansepart/KorrespondansepartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Korrespondansepart/KorrespondansepartRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Korrespondansepart/KorrespondansepartService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Mappe/Mappe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Mappe/MappeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Mappe/MappeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Mappe/MappeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Registrering/Registrering.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Registrering/RegistreringController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Registrering/RegistreringRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Registrering/RegistreringService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Saksmappe/Saksmappe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Saksmappe/SaksmappeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Saksmappe/SaksmappeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Saksmappe/SaksmappeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Skjerming/Skjerming.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Skjerming/SkjermingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Skjerming/SkjermingRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Skjerming/SkjermingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Dokumentbeskrivelse/DokumentbeskrivelseGraph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Dokumentbeskrivelse/GraphDokumentsbeskrivelseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Dokumentobjekt/DokumentobjektGraph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Dokumentobjekt/GraphDokumentobjektRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Journalpost/JournalpostGraph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Journalpost/JournalpostGraphRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Korrespondansepart/KorrespondansepartGraph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Korrespondansepart/KorrespondansepartGraphRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Mappe/MappeGraph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Mappe/MappeGraphRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Registrering/RegistreringGraph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Registrering/RegistreringGraphRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Saksmappe/GraphSaksmappeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Saksmappe/SaksmappeGraph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Skjerming/GraphSkjermingRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Skjerming/SkjermingGraph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RDFtoJava/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RDFtoJava/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Dokumentbeskrivelse/Dokumentbeskrivelse.java" beforeDir="false" afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Dokumentbeskrivelse/Dokumentbeskrivelse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Dokumentobjekt/Dokumentobjekt.java" beforeDir="false" afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Dokumentobjekt/Dokumentobjekt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Graf/NetworkGraphRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Graf/NetworkGraphRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Journalpost/Journalpost.java" beforeDir="false" afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Journalpost/Journalpost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Korrespondansepart/Korrespondansepart.java" beforeDir="false" afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Korrespondansepart/Korrespondansepart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Registrering/Registrering.java" beforeDir="false" afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Registrering/Registrering.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Saksmappe/Saksmappe.java" beforeDir="false" afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Saksmappe/Saksmappe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Skjerming/Skjerming.java" beforeDir="false" afterPath="$PROJECT_DIR$/e-innsyn-graf/src/main/java/com/einnsyn/cosmodb/packages/Skjerming/Skjerming.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -258,12 +246,12 @@
       <option name="presentableId" value="Default" />
       <updated>1561975513399</updated>
       <workItem from="1561975524292" duration="119000" />
-      <workItem from="1562234100958" duration="1170000" />
+      <workItem from="1562234100958" duration="1724000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1289000" />
+    <option name="totallyTimeSpent" value="1843000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="953" y="0" width="974" height="1167" extended-state="0" />

@@ -1,11 +1,7 @@
 package com.einnsyn.cosmodb.packages.Skjerming;
-<<<<<<< HEAD
 
 import com.einnsyn.cosmodb.packages.Registrering.Registrering;
-=======
-import com.einnsyn.cosmodb.packages.Registrering.Registrering;
 import com.microsoft.spring.data.gremlin.annotation.Vertex;
->>>>>>> 3845c59f3c6dce5cd3bc6ec3c4cdace8215879e2
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
