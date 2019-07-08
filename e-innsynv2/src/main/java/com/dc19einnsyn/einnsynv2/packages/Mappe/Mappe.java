@@ -9,15 +9,29 @@ import java.util.Set;
 
 @Entity
 @NoArgsConstructor
-@Table
 public class Mappe {
+    public Set<Registrering> getRegistrering() {
+        return registrering;
+    }
+
+    public void setRegistrering(Set<Registrering> registrering) {
+        this.registrering = registrering;
+    }
+
+    public String getSkjerming() {
+        return skjerming;
+    }
+
+    public void setSkjerming(String skjerming) {
+        this.skjerming = skjerming;
+    }
 
     @OneToMany(
             mappedBy = "mappe",
             cascade = CascadeType.ALL,
             orphanRemoval = true
     )
-    private Set<Registrering> registreringer;
+    private Set<Registrering> registrering;
 
     @Id
     @GeneratedValue
@@ -42,10 +56,35 @@ public class Mappe {
     private String gradering;
     private String skjerming; //Class Maybe reset gets/sets
     private String Mappe; //Class
-    private String Registrering; //Class
+    //private String Registrering; //Class
     private String Saksmappe; //Class
     private String Journalpost; //Class
 
+    public Mappe(Set<Registrering> registrering, String systemID, String tittel, String offentligTittel, String beskrivelse, String noekkelord, String dokumentmedium, String oppbevaringssted, String opprettetDato, String opprettetAv, String avsluttetDato, String avsluttetAv, String referanseArkivdel, String virksomhetsspesifikkeMetadata, String kryssreferanse, String merknad, String kassasjon, String gradering, String skjerming, String mappe, String saksmappe, String journalpost) {
+        this.registrering = registrering;
+        this.systemID = systemID;
+        this.tittel = tittel;
+        this.offentligTittel = offentligTittel;
+        this.beskrivelse = beskrivelse;
+        this.noekkelord = noekkelord;
+        this.dokumentmedium = dokumentmedium;
+        this.oppbevaringssted = oppbevaringssted;
+        this.opprettetDato = opprettetDato;
+        this.opprettetAv = opprettetAv;
+        this.avsluttetDato = avsluttetDato;
+        this.avsluttetAv = avsluttetAv;
+        this.referanseArkivdel = referanseArkivdel;
+        this.virksomhetsspesifikkeMetadata = virksomhetsspesifikkeMetadata;
+        this.kryssreferanse = kryssreferanse;
+        this.merknad = merknad;
+        this.kassasjon = kassasjon;
+        this.gradering = gradering;
+        this.skjerming = skjerming;
+        Mappe = mappe;
+        Saksmappe = saksmappe;
+        Journalpost = journalpost;
+    }
+/*
     public Mappe(String systemID, String tittel, String offentligTittel, String beskrivelse, String noekkelord, String dokumentmedium, String oppbevaringssted, String opprettetDato, String opprettetAv, String avsluttetDato, String avsluttetAv, String referanseArkivdel, String virksomhetsspesifikkeMetadata, String kryssreferanse, String merknad, String kassasjon, String gradering, String skjerming, String mappe, String registrering, String saksmappe, String journalpost) {
         this.systemID = systemID;
         this.tittel = tittel;
@@ -66,11 +105,11 @@ public class Mappe {
         this.gradering = gradering;
         this.skjerming = skjerming;
        Mappe = mappe;
-       Registrering = registrering;
+       //Registrering = registrering;
        Saksmappe = saksmappe;
        Journalpost = journalpost;
     }
-
+*/
     public Long getMappeID() {
         return mappeID;
     }
@@ -215,14 +254,14 @@ public class Mappe {
         this.gradering = gradering;
     }
 
-    public String getSkjerming() {
+    /*public String getSkjerming() {
         return skjerming;
     }
 
     public void setSkjerming(String skjerming) {
         this.skjerming = skjerming;
     }
-
+*/
     public String getMappe() {
         return Mappe;
     }
@@ -231,14 +270,14 @@ public class Mappe {
         Mappe = mappe;
     }
 
-    public String getRegistrering() {
+    /*public String getRegistrering() {
         return Registrering;
     }
 
     public void setRegistrering(String registrering) {
         Registrering = registrering;
     }
-
+*/
     public String getSaksmappe() {
         return Saksmappe;
     }

@@ -12,7 +12,7 @@ import javax.persistence.*;
 public class Korrespondansepart {
 
     @ManyToOne
-    @JoinColumn(name = "registrerings_id")
+    @JoinColumn(name = "registrering_korrespondansepart")
     private Registrering registrering;
 
     @Id

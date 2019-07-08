@@ -1,13 +1,17 @@
 package com.dc19einnsyn.einnsynv2;
 
+import com.dc19einnsyn.einnsynv2.packages.Registrering.Registrering;
+import com.dc19einnsyn.einnsynv2.packages.Registrering.RegistreringRepository;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 //implements CommandLineRunner
 
 @SpringBootApplication
-public class EInnsynv2Application {
-
+public class EInnsynv2Application{
+private long tall;
     public static void main(String[] args) {
         SpringApplication.run(EInnsynv2Application.class, args);
     }
@@ -15,11 +19,11 @@ public class EInnsynv2Application {
   //  @Autowired
   //  SkjermingRepository skjermingRepository;
 
-
-    /*@Bean
-    CommandLineRunner runner(SkjermingRepository repository){
+/*Registrering registrering;
+    @Bean
+    CommandLineRunner runner(RegistreringRepository repository){
         return args -> {
-            repository.save(new Skjerming("tilgang", "hjemmel", "meta", "doku", "varig", "opphoer"));
+            repository.save( new Registrering(123, "hjemmel", "meta", "doku", "varig", "opphoer"));
         };
     }*/
 

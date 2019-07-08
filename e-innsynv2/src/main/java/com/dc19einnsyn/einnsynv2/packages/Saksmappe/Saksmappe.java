@@ -1,11 +1,13 @@
 package com.dc19einnsyn.einnsynv2.packages.Saksmappe;
 
 import com.dc19einnsyn.einnsynv2.packages.Mappe.Mappe;
+import com.dc19einnsyn.einnsynv2.packages.Registrering.Registrering;
 import lombok.*;
 import org.hibernate.exception.DataException;
 
 import javax.persistence.Entity;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 @NoArgsConstructor
@@ -24,8 +26,8 @@ public class Saksmappe extends Mappe {
     private String sakspart;
     private String presidens;
 
-    public Saksmappe(String systemID, String tittel, String offentligTittel, String beskrivelse, String noekkelord, String dokumentmedium, String oppbevaringssted, String opprettetDato, String opprettetAv, String avsluttetDato, String avsluttetAv, String referanseArkivdel, String virksomhetsspesifikkeMetadata, String kryssreferanse, String merknad, String kassasjon, String gradering, String skjerming, String mappe, String registrering, String saksmappe, String journalpost, Integer saksaar, Long sakssekvensnummer, DataException saksdato, String administrativEnhet, String saksansvarlig, String journalenhet, String saksstatus, Date utlaantDato, String utlaantTil, String referanseSekundaerKassifikasjon, String sakspart, String presidens) {
-        super(systemID, tittel, offentligTittel, beskrivelse, noekkelord, dokumentmedium, oppbevaringssted, opprettetDato, opprettetAv, avsluttetDato, avsluttetAv, referanseArkivdel, virksomhetsspesifikkeMetadata, kryssreferanse, merknad, kassasjon, gradering, skjerming, mappe, registrering, saksmappe, journalpost);
+    public Saksmappe(Set<Registrering> registrering, String systemID, String tittel, String offentligTittel, String beskrivelse, String noekkelord, String dokumentmedium, String oppbevaringssted, String opprettetDato, String opprettetAv, String avsluttetDato, String avsluttetAv, String referanseArkivdel, String virksomhetsspesifikkeMetadata, String kryssreferanse, String merknad, String kassasjon, String gradering, String skjerming, String mappe, String saksmappe, String journalpost, Integer saksaar, Long sakssekvensnummer, DataException saksdato, String administrativEnhet, String saksansvarlig, String journalenhet, String saksstatus, Date utlaantDato, String utlaantTil, String referanseSekundaerKassifikasjon, String sakspart, String presidens) {
+        super(registrering, systemID, tittel, offentligTittel, beskrivelse, noekkelord, dokumentmedium, oppbevaringssted, opprettetDato, opprettetAv, avsluttetDato, avsluttetAv, referanseArkivdel, virksomhetsspesifikkeMetadata, kryssreferanse, merknad, kassasjon, gradering, skjerming, mappe, saksmappe, journalpost);
         this.saksaar = saksaar;
         this.sakssekvensnummer = sakssekvensnummer;
         this.saksdato = saksdato;

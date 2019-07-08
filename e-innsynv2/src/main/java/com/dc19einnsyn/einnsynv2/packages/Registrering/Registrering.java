@@ -17,7 +17,7 @@ import java.util.Set;
 public class Registrering {
 
     @ManyToOne
-    @JoinColumn(name = "mappe_id")
+    @JoinColumn(name = "mappe_registrering")
     private Mappe mappe;
 
     @OneToOne(mappedBy = "registrering",
@@ -25,11 +25,12 @@ public class Registrering {
             fetch = FetchType.LAZY,
             optional = false
     )
-    private Skjerming skjerming;
+    private Skjerming skjerminger;
 
     @OneToMany(
             mappedBy = "registrering",
             cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY,
             orphanRemoval = true
     )
     private Set<Dokumentbeskrivelse> dokumentbeskrivelser;
@@ -37,11 +38,13 @@ public class Registrering {
     @OneToMany(
             mappedBy = "registrering",
             cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY,
             orphanRemoval = true
     )
     private Set<Korrespondansepart> korrespondanseparter;
 
     @Id
+    @GeneratedValue
     private Long registreringsID;
     private String systemID;
     private String opprettetDato;
@@ -51,7 +54,7 @@ public class Registrering {
     private String referanseArkivdel;
 
     private String kassasjon;
-    //private String skjerming;
+    private String skjerming;
     private String gradering;
 
     private String dokumentbeskrivelse;
@@ -81,7 +84,7 @@ public class Registrering {
         this.arkivertAv = arkivertAv;
         this.referanseArkivdel = referanseArkivdel;
         this.kassasjon = kassasjon;
-        //this.skjerming = skjerming;
+        this.skjerming = skjerming;
         this.gradering = gradering;
         this.dokumentbeskrivelse = dokumentbeskrivelse;
         this.dokumentobjekt = dokumentobjekt;
@@ -162,14 +165,14 @@ public class Registrering {
         this.kassasjon = kassasjon;
     }
 
-    /*public String getSkjerming() {
+    public String getSkjerming() {
         return skjerming;
     }
 
     public void setSkjerming(String skjerming) {
         this.skjerming = skjerming;
     }
-*/
+
     public String getGradering() {
         return gradering;
     }

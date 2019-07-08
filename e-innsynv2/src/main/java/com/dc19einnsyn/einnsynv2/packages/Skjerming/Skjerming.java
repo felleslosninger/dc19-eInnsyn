@@ -13,6 +13,7 @@ public class Skjerming {
         @OneToOne(fetch = FetchType.LAZY)
         @JoinColumn(name = "registrering_id")
         private Registrering registrering;
+
         @Id
         @GeneratedValue
         private Long skjermingId;

@@ -14,7 +14,7 @@ import java.util.Set;
 public class Dokumentbeskrivelse {
 
     @ManyToOne
-    @JoinColumn(name = "registrerings_id")
+    @JoinColumn(name = "registrering_dokumentbeskrivelse")
     private Registrering registrering;
 
     @OneToMany(

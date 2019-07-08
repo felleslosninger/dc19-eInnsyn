@@ -14,7 +14,7 @@ import java.util.Date;
 public class Dokumentobjekt {
 
     @ManyToOne
-    @JoinColumn(name = "dokumentbeskrivelse_id")
+    @JoinColumn(name = "dokumentbeskrivelse_dokumentobjekt")
     private Dokumentbeskrivelse dokumentbeskrivelse;
 
     @Id
