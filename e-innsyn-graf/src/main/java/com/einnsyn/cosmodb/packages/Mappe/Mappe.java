@@ -2,20 +2,23 @@ package com.einnsyn.cosmodb.packages.Mappe;
 
 
 import com.einnsyn.cosmodb.packages.Registrering.Registrering;
+import com.microsoft.spring.data.gremlin.annotation.Vertex;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Set;
 
-@Entity
+@Vertex
 @NoArgsConstructor
 public class Mappe {
 
+    /*
     @OneToMany(
             mappedBy = "mappe",
             cascade = CascadeType.ALL, //foreløpig uvist hva denne gjør
             orphanRemoval = true //foreløpig uvist hva denne gjør
     )
+     */
     private Set<Registrering> registreringer;
 
     @Id

@@ -4,34 +4,41 @@ import com.einnsyn.cosmodb.packages.Dokumentbeskrivelse.Dokumentbeskrivelse;
 import com.einnsyn.cosmodb.packages.Korrespondansepart.Korrespondansepart;
 import com.einnsyn.cosmodb.packages.Mappe.Mappe;
 import com.einnsyn.cosmodb.packages.Skjerming.Skjerming;
+import com.microsoft.spring.data.gremlin.annotation.Vertex;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Set;
 
-@Entity
+@Vertex
 @Data
 @NoArgsConstructor
 @Table
 public class Registrering {
 
+    /*
     @ManyToOne
     @JoinColumn(name = "mappe_id")
+     */
     private Mappe mappe;
 
+    /*
     @OneToOne(mappedBy = "registrering",
             cascade = CascadeType.ALL, //foreløpig uvist hva denne gjør
             fetch = FetchType.LAZY,
             optional = false
     )
+     */
     private Skjerming skjerming;
 
+    /*
     @OneToMany(
             mappedBy = "registrering",
             cascade = CascadeType.ALL, //foreløpig uvist hva denne gjør
             orphanRemoval = true
     )
+     */
     private Set<Dokumentbeskrivelse> dokumentbeskrivelser;
 
     @OneToMany(
