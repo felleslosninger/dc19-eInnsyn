@@ -34,43 +34,29 @@ public class Neo4j implements AutoCloseable{
 
 
     @Override
-        public void close() throws Exception {
-            driver.close();
+    public void close() throws Exception {
+        driver.close();
+    }
+
+    public void printGreeting( final String message ) {
+        try ( Session session = driver.session() ) {
+            String greeting = session.writeTransaction( new TransactionWork<String>() {
+                @Override
+                public String execute( Transaction tx ) {
+                    StatementResult result = tx.run( "CREATE (a:Greeting) " +
+                                    "SET a.message = $message " +
+                                    "RETURN a.message + ', from node ' + id(a)",
+                            parameters( "message", message ) );
+                    return result.single().get( 0 ).asString();
+                }
+            } );
+            System.out.println( greeting );
         }
-
-        public void printGreeting( final String message ) {
-            try ( Session session = driver.session() ) {
-                String greeting = session.writeTransaction( new TransactionWork<String>() {
-                    @Override
-                    public String execute( Transaction tx )
-                    {
-                        StatementResult result = tx.run( "CREATE (a:Greeting) " +
-                                        "SET a.message = $message " +
-                                        "RETURN a.message + ', from node ' + id(a)",
-                                parameters( "message", message ) );
-                        return result.single().get( 0 ).asString();
-                    }
-                } );
-                System.out.println( greeting );
-
-
-            }
+    }
+    public static void main( String... args ) throws Exception {
+        try ( Neo4j greeter = new Neo4j( "bolt://localhost:7687", "neo4j", "difidatabase" ) ) {
+            greeter.printGreeting( "hello, world :) " );
+            greeter.traverse(greeter.driver);
         }
-
-
-        public static void main( String... args ) throws Exception
-        {
-            try ( Neo4j greeter = new Neo4j( "bolt://localhost:7687", "neo4j", "difidatabase" ) )
-            {
-                greeter.printGreeting( "hello, world :) " );
-
-            }
-
-            Neo4j db = new Neo4j("bolt://localhost:7687", "neo4j", "difidatabase");
-
-            db.traverse(db.driver);
-
-
-
-        }
+    }
 }
