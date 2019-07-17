@@ -54,7 +54,7 @@ public class Neo4j implements AutoCloseable{
         }
     }
     public static void main( String... args ) throws Exception {
-        try ( Neo4j greeter = new Neo4j( "bolt://localhost:7687", "neo4j", "difidatabase" ) ) {
+        try ( Neo4j greeter = new Neo4j( "bolt://localhost:7687", "tvy", "hello" ) ) {
             greeter.printGreeting( "hello, world :) " );
             greeter.traverse(greeter.driver);
         }
