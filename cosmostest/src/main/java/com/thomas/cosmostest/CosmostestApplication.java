@@ -1,40 +1,30 @@
 package com.thomas.cosmostest;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.util.Assert;
+import org.springframework.boot.context.event.ApplicationReadyEvent;
+import org.springframework.context.event.EventListener;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-import java.util.Optional;
+import com.thomas.cosmostest.CosmosDbDemo;
+
+import java.util.UUID;
+import java.util.stream.Stream;
 
 @SpringBootApplication
 public class CosmostestApplication {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(CosmostestApplication.class);
+    public CosmostestApplication(){
 
-    @Autowired
-    private UserRepository repository;
-
+    }
     public static void main(String[] args) {
         SpringApplication.run(CosmostestApplication.class, args);
-    }
+        CosmosDbDemo cdd = new CosmosDbDemo();
 
-    public void run(String... var1) throws Exception{
-        final User testUser = new User("testId", "testFirstName", "testLastName", "test address line one");
 
-        repository.deleteAll();
-        repository.save(testUser);
-
-        final Optional<User> opResult = repository.findById(testUser.getId());
-        Assert.isTrue(opResult.isPresent(), "Cannot find user.");
-
-        final User result = opResult.get();
-        Assert.state(result.getFirstName().equals(testUser.getFirstName()), "query result firstName doesn't match!");
-        Assert.state(result.getLastName().equals(testUser.getLastName()), "query result lastName doesn't match!");
-
-        LOGGER.info("findOne in User collection get result: {}", result.toString());
     }
 
 }
