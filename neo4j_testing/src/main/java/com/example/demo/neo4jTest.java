@@ -9,9 +9,9 @@ import java.sql.ResultSet;
 
 public class neo4jTest {
     public static void main(String[] args) throws Exception {
-        Connection con = DriverManager.getConnection("jdbc:neo4j:bolt://localhost/?user=neo4j,password=1234,scheme=basic");//jdbc
+        Connection con = DriverManager.getConnection("jdbc:neo4j:bolt://localhost/?user=neo4j,password=difidatabase,scheme=basic");//jdbc
 
-        String query = "MATCH (n) Return (n) LIMIT 100";
+        String query = "MATCH (n:ns0__Saksmappe) WHERE n.ns0__mappeID = \"2014/139\"  RETURN properties(n) LIMIT 200";
         String query1 = ":POST /rdf/cypher {\"cypher\" : \"MATCH (n) RETURN n LIMIT 50\"}";
 
                 PreparedStatement stmt = con.prepareStatement(query);
@@ -28,13 +28,13 @@ public class neo4jTest {
 
 
         try {
-            Driver driver = GraphDatabase.driver("bolt://localhost:7687", AuthTokens.basic("neo4j", "1234")); //driver
+            Driver driver = GraphDatabase.driver("bolt://localhost:11006", AuthTokens.basic("neo4j", "difidatabase")); //driver
             Session session = driver.session();
 
             System.out.println("THIS IS THE SESSION QUERY");
 
             StatementResult result = session.run(
-                    query1
+                    query
             );
                 while (result.hasNext()){
                 System.out.println(result.next().toString());

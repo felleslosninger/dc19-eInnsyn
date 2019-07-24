@@ -30,13 +30,15 @@ import com.microsoft.azure.documentdb.RequestOptions;
 @RestController
 public class Cosmostest9999Application {
 
+
+
+    private DocumentClient client;
     public static void main(String[] args) throws ParseException, IOException, DocumentClientException {
         SpringApplication.run(Cosmostest9999Application.class, args);
         Cosmostest9999Application cb = new Cosmostest9999Application();
+        System.out.println("Running Main");
         cb.connectToDB();
     }
-
-    private DocumentClient client;
 
     @RequestMapping("Connect")
     public String connectToDB() throws DocumentClientException, IOException, ParseException {
@@ -49,17 +51,20 @@ public class Cosmostest9999Application {
         JSONParser parser = new JSONParser();
         // Use JSONObject for simple JSON and JSONArray for array of JSON.
         JSONObject data = (JSONObject) parser
-                .parse(new FileReader("C:\\Users\\camp-tvy\\Documents\\DIFI\\employees.json"));
+                .parse(new FileReader("C:\\Users\\camp-rgu\\Documents\\Dumpfil\\jsonfil.json"));
 
 
         //This one is added to take date and time.
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         Date date = new Date();
         data.put("id", date.toString());   // we are taking ID as a random value.
+        System.out.println("Create DB");
 
-        this.createDatabaseIfNotExists("javaDB");
-        this.createDocumentCollectionIfNotExists("javaDB", "testJava");
-        this.createDocumentIfNotExists("javaDB", "testJava", data);
+        this.createDatabaseIfNotExists("RandoDB");
+        System.out.println("Create coll");
+        this.createDocumentCollectionIfNotExists("RandoDB", "testRando");
+        System.out.println("Create doc");
+        this.createDocumentIfNotExists("RandoDB", "testRando", data);
 
         return "Success";
     }
@@ -71,6 +76,7 @@ public class Cosmostest9999Application {
         // Check to verify a database with the id=FamilyDB does not exist
         try {
             client.readDatabase(databaseLink, null);
+            System.out.println("database created");
         } catch (DocumentClientException de) {
             // If the database does not exist, create a new database
             if (de.getStatusCode() == 404) {
@@ -92,6 +98,7 @@ public class Cosmostest9999Application {
 
         try {
             client.readCollection(collectionLink, null);
+            System.out.println("colleaction red");
         } catch (DocumentClientException de) {
             // If the document collection does not exist, create a new
             // collection
@@ -129,6 +136,8 @@ public class Cosmostest9999Application {
         try {
             String documentLink = String.format("/dbs/%s/colls/%s/docs/%s", databaseName, collectionName, json);
             client.readDocument(documentLink, new RequestOptions());
+            System.out.println("Dokument created");
+
         } catch (DocumentClientException de) {
             if (de.getStatusCode() == 404) {
                 String collectionLink = String.format("/dbs/%s/colls/%s", databaseName, collectionName);
