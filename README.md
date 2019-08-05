@@ -20,5 +20,5 @@ Innhold i github
   ```
   Started MongoApplication in 8.138 seconds (JVM running for 21.789)
   ```
-  kommer opp kan du åpne en ny kommandolinje med endre mappen til der applikasjonen er. Derfor kan du følge opplæringen først vis under dette punktet.
+  kommer opp kan du åpne en ny kommandolinje med endre mappen til der applikasjonen er. Derfor kan du følge opplæringen først vis under dette punktet. \
 8. neo4j_testing
