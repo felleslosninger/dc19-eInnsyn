@@ -21,4 +21,7 @@ Innhold i github
   Started MongoApplication in 8.138 seconds (JVM running for 21.789)
   ```
   kommer opp kan du åpne en ny kommandolinje med endre mappen til der applikasjonen er. Derfor kan du følge opplæringen først vis under dette punktet. \
+  Link til diverse mongoDB kommandoer:\
+  https://docs.mongodb.com/manual/reference/mongo-shell/
+
 8. neo4j_testing
