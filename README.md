@@ -9,4 +9,5 @@ Innhold i github
 5. e-innsyn-graf
 6. e-innsynv2
 7. mongo
+  https://spring.io/guides/gs/accessing-mongodb-data-rest/
 8. neo4j_testing
