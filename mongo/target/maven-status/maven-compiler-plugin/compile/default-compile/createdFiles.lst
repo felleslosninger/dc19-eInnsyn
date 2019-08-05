@@ -1,0 +1,3 @@
+com\example\mongo\PersonRepository.class
+com\example\mongo\Person.class
+com\example\mongo\MongoApplication.class
