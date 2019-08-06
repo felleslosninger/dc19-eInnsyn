@@ -19,7 +19,7 @@ Innhold i github
   https://spring.io/guides/gs/accessing-mongodb-data-rest/ \
   Her kan man laste ned en fullstendig version av applikasjonen.\
   \
-  MongoDB programmet må først lastes ned fra nettsiden: https://www.mongodb.com/download-center/community vanligvis MSI pakken. Du kan også laste ned MongoDB Compass for et mer visuelt fremstilling av databasen, selv om det anbefales å start databasen i kommandlinjen først, siden MongoDB Compass har gitt flere feil når det kommer til oppsettet av en database. For å opprett databasen i kommandlinjen må man først endra mappen til bin mappen i MongoDB programmet du lastet ned. Denne er vanligvis i programfiler under MongoDB mappen du laget da du lastet ned MongoDB (vanligvis: C:\Program Files\MongoDB\Server\4.0+bin). Derfra kjører du kommandoen:
+  MongoDB programmet må først lastes ned fra nettsiden: https://www.mongodb.com/download-center/community vanligvis MSI pakken. Du kan også laste ned MongoDB Compass for et mer visuelt fremstilling av databasen, selv om det anbefales å start databasen i kommandlinjen først, siden MongoDB Compass har gitt flere feil når det kommer til oppsettet av en database. For å opprett databasen i kommandlinjen må man først endra mappen til bin mappen i MongoDB programmet du lastet ned. Denne er vanligvis i programfiler under MongoDB mappen du laget da du lastet ned MongoDB (vanligvis: C:\Program Files\MongoDB\Server\4.0\bin). Derfra kjører du kommandoen:
   ```
   mongo
   ```
