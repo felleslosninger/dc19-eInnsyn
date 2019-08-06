@@ -6,7 +6,7 @@ Innhold i github
   Denne mappen er bare et førsteutkast av dt som vi har endt opp med å gjøre i mappen "e-innsynv2".  
     
 2. RDFtoJava\
-  Denne mappen er vårt forsøk på å lese inn data fra datadumpen vi fikk fra eInnsyn inn i java klassene våre. Vi prøvde forskjellige           bibliotek som Pinto, rdf4j og Jena.\
+  Denne mappen er vårt forsøk på å lese inn data fra datadumpen vi fikk fra eInnsyn inn i java klassene våre. Vi prøvde forskjellige           bibliotek som Pinto, rdf4j og Jena.
 3. cosmostest\
   Denne applikasjonen var eit forsøk på å snakke med Azure Cosmos DB, men fungerte ikkje.
 4. cosmostest9999\
