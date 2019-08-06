@@ -33,3 +33,4 @@ Innhold i github
   https://docs.mongodb.com/manual/reference/mongo-shell/
 
 8. neo4j_testing\
+  Denne mappen inneholder et prosjekt der vi testa (hello world/spørringer) tilkobling mot neo4j før vi kobla opp e-innsyn-graf. 
