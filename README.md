@@ -8,13 +8,13 @@ Innhold i github
 2. RDFtoJava\
   Denne mappen er vårt forsøk på å lese inn data fra datadumpen vi fikk fra eInnsyn inn i java klassene våre. Vi prøvde forskjellige           bibliotek som Pinto, rdf4j og Jena.\
 3. cosmostest\
-  Denne applikasjonen var eit forsøk på å snakke med Azure Cosmos DB, men fungerte ikkje.\
+  Denne applikasjonen var eit forsøk på å snakke med Azure Cosmos DB, men fungerte ikkje.
 4. cosmostest9999\
-  Forsøk på å snakke med Cosmos, fikk en del feilmeldinger med filen Microsoft.Azure.Documents.ServiceInterop.dll.\
+  Forsøk på å snakke med Cosmos, fikk en del feilmeldinger med filen Microsoft.Azure.Documents.ServiceInterop.dll.
 5. e-innsyn-graf\
-  Denne mappen inneholder REST API for å legge inn data i en grafdatabase. Her har vi oppretta strukturen til eInnsyn i java klasser og satt   dei som noder og relasjoner med nødvendige annotasjoner.\
+  Denne mappen inneholder REST API for å legge inn data i en grafdatabase. Her har vi oppretta strukturen til eInnsyn i java klasser og satt   dei som noder og relasjoner med nødvendige annotasjoner.
 6. e-innsynv2\
-  Denne mappen inneholder REST API for å legge inn data til Azure SQL database. Det som også er gjort her, er å legge inn tilsvarende med       informasjon som vi fikk i dummyfilen, dette var fordi vi trodde det var oppgaven, så denne ble satt som ferdig etter at det ble avklart.\
+  Denne mappen inneholder REST API for å legge inn data til Azure SQL database. Det som også er gjort her, er å legge inn tilsvarende med       informasjon som vi fikk i dummyfilen, dette var fordi vi trodde det var oppgaven, så denne ble satt som ferdig etter at det ble avklart.
 7. mongo\
   mongo inneholder en applikasjon som for tilgang til dokumentbasert data gjennom hypermediabasert RESTful front end. Hvordan man setter opp applikasjonen er beskrevet i opplæringen under:\
   https://spring.io/guides/gs/accessing-mongodb-data-rest/ \
